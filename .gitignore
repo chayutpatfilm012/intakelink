@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+build/
+dist/
+# Secrets and local data: never commit
+.env
+*.key
+data/local/
+audit.jsonl

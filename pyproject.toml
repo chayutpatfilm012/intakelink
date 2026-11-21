@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "intakelink"
+version = "0.1.0"
+description = "Evidence-checked document matching for personal-injury matters (CEN 4010 prototype)"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Chayutpat Chuanchom" }]
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+ui = ["streamlit>=1.35"]
+pdf = ["pypdf>=4"]
+llm = ["anthropic>=1.0"]
+dev = ["pytest>=8"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src", "tests"]
