@@ -60,7 +60,9 @@ def test_sixty_four_documents_in_the_planned_mix(manifest):
 
 def test_expected_outcomes_mix(manifest):
     ambiguous = Counter(e["expected_outcome"] for e in manifest if e["category"] == "ambiguous")
-    assert ambiguous == {"AMBIGUOUS_MATCH": 6, "LOW_CONFIDENCE": 4}
+    assert ambiguous == {"AMBIGUOUS_MATCH": 5, "LOW_CONFIDENCE": 3, "CONFIDENT": 2}
+    conflicts = [e for e in manifest if e["fact_conflict"]]
+    assert len(conflicts) == 2 and all(e["category"] == "ambiguous" for e in conflicts)
 
 
 # --- files match the generator ---------------------------------------------------

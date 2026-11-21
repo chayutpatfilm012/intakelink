@@ -5,7 +5,8 @@ Any resemblance to a real person or organization is coincidental.
 
 Document set (Solution Design Report §8.3):
   30 standard                      one matter, clear evidence
-  10 ambiguous / conflicting       6 expected AMBIGUOUS_MATCH, 4 LOW_CONFIDENCE
+  10 ambiguous / conflicting       5 expected AMBIGUOUS_MATCH, 3 LOW_CONFIDENCE,
+                                   2 confident but with a conflicting DOB (FACT_CONFLICT)
   10 cross-matter                  5 tier 1 (another client's name),
                                    5 tier 2 (another client's claim no. or name + DOB)
   12 in 6 duplicate pairs          2 exact, 2 probable (re-sent / re-scanned),
@@ -129,6 +130,7 @@ class Spec:
     foreign: Optional[Foreign] = None
     duplicate_of: Optional[str] = None   # key of the original
     duplicate_kind: Optional[str] = None # exact | probable | newer_version
+    fact_conflict_page: Optional[int] = None  # page where the DOB contradicts the matter
 
 
 def _std(key, mid, doc_type, codes, **ov) -> Spec:
@@ -196,18 +198,22 @@ SPECS: list[Spec] = [
     # Same client, two matters, shared insurer: 0.6 vs 0.6.
     Spec("A03", "ambiguous", "insurer_letter", ids("M-1389", "NM DOB INS"),
          "AMBIGUOUS_MATCH", candidates=("M-1389", "M-1407")),
-    # Same client, provider of the newer matter only: 0.6 vs 0.5.
-    Spec("A04", "ambiguous", "medical_bill", ids("M-1407", "NM DOB PRV"),
-         "AMBIGUOUS_MATCH", candidates=("M-1389", "M-1407")),
+    # Conflicting fact: claim + name identify the matter, but the DOB has a typo
+    # (12/15 for 12/05). Confident match (1.0) plus a blocking FACT_CONFLICT.
+    Spec("F01", "ambiguous", "insurer_letter",
+         ids("M-1187", "CL NM DOB INC INS", DOB="December 15, 1995"),
+         "CONFIDENT", truth="M-1187", fact_conflict_page=1),
     # Cover letter quotes one matter number, enclosure identifies another: 1.0 vs 1.0.
     Spec("A05", "ambiguous", "correspondence", ids("M-1042", "MN") + ids("M-1335", "CL NM DOB"),
          "AMBIGUOUS_MATCH", candidates=("M-1042", "M-1335")),
     # Name + DOB + provider of one, claim of another: 0.6 vs 0.6.
     Spec("A06", "ambiguous", "medical_bill", ids("M-1276", "NM DOB PRV") + ids("M-1187", "CL"),
          "AMBIGUOUS_MATCH", candidates=("M-1187", "M-1276")),
-    # Shared name plus one insurer: 0.3 vs 0.2.
-    Spec("L01", "ambiguous", "insurer_letter", ids("M-1368", "NM INS"),
-         "LOW_CONFIDENCE", candidates=("M-1368", "M-1372")),
+    # Conflicting fact: transposed DOB digits (11/12 for 11/21). Claim + name +
+    # provider give 0.9; FACT_CONFLICT blocks approval.
+    Spec("F02", "ambiguous", "medical_record",
+         ids("M-1351", "NM DOB CL PRV", DOB="11/12/1986"),
+         "CONFIDENT", truth="M-1351", fact_conflict_page=1),
     # Name only: 0.2.
     Spec("L02", "ambiguous", "correspondence", ids("M-1219", "NM"), "LOW_CONFIDENCE",
          candidates=("M-1219",)),
@@ -542,6 +548,8 @@ def build_dataset() -> tuple[list[dict], dict[str, bytes]]:
                               "page": spec.foreign.page}),
             "duplicate": (None if spec.duplicate_of is None else
                           {"kind": spec.duplicate_kind, "of": filenames[spec.duplicate_of]}),
+            "fact_conflict": (None if spec.fact_conflict_page is None else
+                              {"field": DATE_OF_BIRTH, "page": spec.fact_conflict_page}),
             "facts": facts,
         })
     return manifest, files

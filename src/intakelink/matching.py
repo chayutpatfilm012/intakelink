@@ -110,6 +110,7 @@ def norm_org(value: str) -> str:
 class MatchResult:
     candidates: list[Proposal]                 # every matter with score > 0, best first
     flags: list[Flag] = field(default_factory=list)
+    threshold: float = CONFIDENT_THRESHOLD
 
     @property
     def top(self) -> Optional[Proposal]:
@@ -117,7 +118,7 @@ class MatchResult:
 
     @property
     def confident(self) -> bool:
-        return self.top is not None and self.top.score >= CONFIDENT_THRESHOLD
+        return self.top is not None and self.top.score >= self.threshold
 
     @property
     def matter_id(self) -> Optional[str]:
@@ -189,12 +190,18 @@ def _summary(candidates: list[Proposal], n: int = 3) -> str:
     return ", ".join(f"{p.matter_id} {p.score:.2f}" for p in candidates[:n]) or "no matter scored"
 
 
-def match(facts: list[Fact], index: MatterIndex) -> MatchResult:
-    """Score every matter and decide the outcome. Pure: changes nothing."""
+def match(facts: list[Fact], index: MatterIndex, *,
+          threshold: float = CONFIDENT_THRESHOLD,
+          margin: float = AMBIGUITY_MARGIN) -> MatchResult:
+    """Score every matter and decide the outcome. Pure: changes nothing.
+
+    ``threshold`` and ``margin`` exist for the sensitivity analysis
+    (``intakelink.evaluate``); the system always uses the defaults.
+    """
     scored = [score_matter(facts, m) for m in index.all()]
     candidates = sorted((p for p in scored if p.score > 0),
                         key=lambda p: (-p.score, p.matter_id))
-    result = MatchResult(candidates)
+    result = MatchResult(candidates, threshold=threshold)
 
     if not result.confident:
         result.flags.append(Flag(FlagType.LOW_CONFIDENCE, False,
@@ -203,10 +210,10 @@ def match(facts: list[Fact], index: MatterIndex) -> MatchResult:
 
     if len(candidates) > 1:
         gap = round(candidates[0].score - candidates[1].score, 2)
-        if gap <= AMBIGUITY_MARGIN:
+        if gap <= margin:
             result.flags.append(Flag(
                 FlagType.AMBIGUOUS_MATCH, True,
-                f"top matters within {AMBIGUITY_MARGIN:.2f}: {_summary(candidates, 2)}"))
+                f"top matters within {margin:.2f}: {_summary(candidates, 2)}"))
     return result
 
 

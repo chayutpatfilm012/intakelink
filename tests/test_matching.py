@@ -3,7 +3,7 @@ from __future__ import annotations
 
 import pytest
 
-from conftest import PARALEGAL, make_record
+from conftest import PARALEGAL, SENIOR, make_record
 from intakelink.access import MatterIndex
 from intakelink.audit import AuditLog
 from intakelink.matching import (match, norm_date, norm_name, norm_org,
@@ -183,11 +183,12 @@ def test_low_confidence_needs_a_person_to_choose_the_matter(two):
     record.facts = facts(("clientName", "Dana Whitfield"))
     write_flags(record, run_matching(record, two), audit)
     with pytest.raises(ReviewError) as err:
-        review_action(record, Action.VALIDATE, PARALEGAL, index=two, audit=audit,
+        review_action(record, Action.VALIDATE, SENIOR, index=two, audit=audit,
                       expected_version=record.version)
     assert err.value.code == "GUARD_BLOCKED" and "no matter selected" in err.value.message
 
-    review_action(record, Action.CORRECT, PARALEGAL, index=two, audit=audit,
+    # No matter: the intake queue. Intake staff (a senior paralegal) routes it.
+    review_action(record, Action.CORRECT, SENIOR, index=two, audit=audit,
                   expected_version=record.version, change={"selected_matter_id": "M-1042"},
                   reason="client confirmed by phone")
     write_flags(record, run_matching(record, two), audit)   # checks re-run after correction
