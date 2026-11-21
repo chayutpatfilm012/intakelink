@@ -18,7 +18,9 @@ except ImportError:      # running from a source checkout without install
 
 import streamlit as st
 
+from intakelink.access import can_handle_intake
 from intakelink.demo import load_set
+from intakelink.filing import INTAKE_QUEUE
 from intakelink.fields import DOCUMENT_TYPES
 from intakelink.models import Action, HoldStatus, ReviewStatus
 from intakelink.review import ReviewError
@@ -142,14 +144,24 @@ with queue_tab:
             with st.form(f"act-{rec.record_id}-{rec.version}"):
                 action = st.selectbox("Action", list(Action), format_func=lambda a: a.value)
                 reason = st.text_area("Reason (required for reject, escalate, override and release)")
-                matter = st.selectbox("Correct: matter", ["(no change)"] + svc.matters_for(actor))
+                # From the intake queue, intake staff may route to any matter.
+                targets = ([m.matter_id for m in svc.index.all()]
+                           if rec.target_matter_id() is None else svc.matters_for(actor))
+                matter = st.selectbox("Correct: matter", ["(no change)"] + targets)
                 doc_type = st.selectbox("Correct: document type", ["(no change)", *DOCUMENT_TYPES])
+                fact_ids = ["(no change)"] + [f.fact_id for f in rec.facts]
+                fact_label = {f.fact_id: f"{f.fact_id} {f.field} (page {f.page})" for f in rec.facts}
+                fact_id = st.selectbox("Correct: fact", fact_ids,
+                                       format_func=lambda i: fact_label.get(i, i))
+                fact_value = st.text_input("Correct: new value for that fact")
                 if st.form_submit_button("Submit"):
                     change = {}
                     if matter != "(no change)":
                         change["selected_matter_id"] = matter
                     if doc_type != "(no change)":
                         change["document_type"] = doc_type
+                    if fact_id != "(no change)" and fact_value.strip():
+                        change["facts"] = {fact_id: fact_value.strip()}
                     try:
                         svc.act(rec.record_id, action, actor, expected_version=rec.version,
                                 reason=reason or None, change=change or None)
@@ -169,6 +181,8 @@ with queue_tab:
 # --- notifications / filed / audit ---------------------------------------------------
 with notes_tab:
     notes = svc.notifier.for_user(actor.user_id)
+    if can_handle_intake(actor):
+        notes += svc.notifier.for_user(INTAKE_QUEUE)
     st.dataframe([{"subject": n.subject, "message": n.body} for n in notes],
                  hide_index=True, width="stretch")
     if not notes:

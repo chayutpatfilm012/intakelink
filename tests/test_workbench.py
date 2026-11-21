@@ -8,6 +8,7 @@ import pytest
 pytest.importorskip("streamlit")
 from streamlit.testing.v1 import AppTest  # noqa: E402
 
+from intakelink.models import Action, FlagType  # noqa: E402
 from intakelink.synthetic import USERS  # noqa: E402
 
 APP = str(Path(__file__).resolve().parents[1] / "app" / "workbench.py")
@@ -52,6 +53,25 @@ def test_refused_action_is_shown_and_changes_nothing():
     assert not at.exception, at.exception
     assert any("Refused" in e.value for e in at.error)
     assert svc.records[blocked].version == version
+
+
+def test_fact_correction_through_the_page_clears_a_fact_conflict():
+    at = _loaded("p.lee")
+    svc = at.session_state["service"]
+    rid = next(r.record_id for r in svc.visible_records(USERS["p.lee"])
+               if r.has_open(FlagType.FACT_CONFLICT))
+    rec = svc.records[rid]
+    dob = next(f for f in rec.facts if f.field == "dateOfBirth")
+    _by_label(at.selectbox, "Open record").set_value(rid).run()
+    _by_label(at.selectbox, "Action").set_value(Action.CORRECT)
+    _by_label(at.selectbox, "Correct: fact").set_value(dob.fact_id)
+    _by_label(at.text_input, "Correct: new value for that fact").input(
+        svc.index.get(rec.target_matter_id()).date_of_birth)
+    _by_label(at.text_area, "Reason (required for reject, escalate, override and release)").input(
+        "DOB checked against the intake form")
+    _by_label(at.button, "Submit").click().run()
+    assert not at.exception, at.exception
+    assert not rec.open_blocking_flags()
 
 
 def test_approval_through_the_page_files_the_record():

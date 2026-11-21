@@ -13,7 +13,7 @@ from conftest import ATTORNEY, PARALEGAL, make_record
 from intakelink import demo
 from intakelink.audit import AuditLog
 from intakelink.filing import INTAKE_QUEUE, FilingError, MockCaseManagementSystem
-from intakelink.models import Action, ProcessingStatus, ReviewStatus
+from intakelink.models import Action, FlagType, ProcessingStatus, ReviewStatus
 from intakelink.review import ReviewError, review_action
 from intakelink.service import IntakeLinkService
 from intakelink.synthetic import USERS, matter_index
@@ -85,7 +85,7 @@ def test_correction_reruns_checks(svc):
     service, ids = svc
     rid = ids["L02"]                                   # name only: no matter proposed
     rec = service.records[rid]
-    service.act(rid, Action.CORRECT, USERS["p.garcia"], expected_version=rec.version,
+    service.act(rid, Action.CORRECT, USERS["s.ortiz"], expected_version=rec.version,
                 change={"selected_matter_id": "M-1219"}, reason="confirmed by phone")
     assert rec.processing_status == ProcessingStatus.READY_FOR_REVIEW
     assert [e.event for e in service.audit.for_record(rid)][-2:] == ["correct", "flags_written"]
@@ -97,6 +97,44 @@ def test_refused_action_is_not_filed(svc):
     with pytest.raises(ReviewError):
         service.act(rid, Action.VALIDATE, USERS["p.lee"], expected_version=service.records[rid].version)
     assert service.cms.receipt_for(rid) is None
+
+
+def test_exact_duplicate_blocks_approval_until_rejected(svc):
+    service, ids = svc
+    rid = ids["D02"]
+    rec = service.records[rid]
+    assert rec.has_open(FlagType.EXACT_DUPLICATE)
+    with pytest.raises(ReviewError) as err:
+        service.act(rid, Action.VALIDATE, USERS["p.lee"], expected_version=rec.version)
+    assert err.value.code == "GUARD_BLOCKED"
+    service.act(rid, Action.REJECT, USERS["p.lee"], expected_version=rec.version,
+                reason="exact duplicate of an earlier upload")
+    assert rec.review_status == ReviewStatus.REJECTED
+    assert service.cms.receipt_for(rid) is None
+
+
+def test_exact_duplicate_stays_blocked_after_escalation(svc):
+    service, ids = svc
+    rid = ids["D04"]                                   # M-1436: a.mensah, p.garcia
+    rec = service.records[rid]
+    service.act(rid, Action.ESCALATE, USERS["p.garcia"], expected_version=rec.version,
+                reason="same file twice; sender may have meant another document")
+    with pytest.raises(ReviewError) as err:
+        service.act(rid, Action.VALIDATE, USERS["a.mensah"], expected_version=rec.version)
+    assert err.value.code == "GUARD_BLOCKED"
+
+
+def test_fact_conflict_is_resolved_by_correcting_the_fact(svc):
+    service, ids = svc
+    rid = ids["F02"]                                   # M-1351, DOB digits transposed
+    rec = service.records[rid]
+    assert rec.has_open(FlagType.FACT_CONFLICT)
+    dob = next(f for f in rec.facts if f.field == "dateOfBirth")
+    service.act(rid, Action.CORRECT, USERS["p.lee"], expected_version=rec.version,
+                change={"facts": {dob.fact_id: "11/21/1986"}}, reason="DOB on intake form")
+    assert not rec.has_open(FlagType.FACT_CONFLICT)    # service re-ran the checks
+    service.act(rid, Action.VALIDATE, USERS["p.lee"], expected_version=rec.version)
+    assert service.cms.receipt_for(rid).matter_id == "M-1351"
 
 
 def test_queue_shows_only_own_matters_and_intake_queue(svc):

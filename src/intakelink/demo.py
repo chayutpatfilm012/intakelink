@@ -4,8 +4,8 @@
    hand-written ground truth in data/synthetic/manifest.json.
 2. Plays a scripted review session through the real rules: a clean approval,
    a tier-1 override, a tier-2 attorney release, an ambiguous match resolved,
-   a low-confidence document assigned, a duplicate rejected, and an
-   off-matter view refused.
+   a low-confidence document assigned, an exact duplicate rejected, a
+   conflicting DOB corrected, and an off-matter view refused.
 3. Prints filings, notifications and audit-log totals.
 
 Files go to a fresh work directory (default: a temp folder); the audit log is
@@ -59,6 +59,8 @@ def check_against_manifest(service, ids, data_dir: Path = DATA) -> list[str]:
             problems.append(f"{e['file']}: expected {e['expected_outcome']}, got {got}")
         elif got == "CONFIDENT" and rec.target_matter_id() != e["truth_matter"]:
             problems.append(f"{e['file']}: proposed {rec.target_matter_id()}, truth {e['truth_matter']}")
+        if rec.has_open(FlagType.FACT_CONFLICT) is not bool(e.get("fact_conflict")):
+            problems.append(f"{e['file']}: FACT_CONFLICT expected {bool(e.get('fact_conflict'))}")
     return problems
 
 
@@ -103,16 +105,27 @@ def run_script(service: IntakeLinkService, ids: dict[str, str],
         reason="letter date is after the July 2026 accident; M-1389 claim is closed")
     act("A03", Action.VALIDATE, "p.lee")
 
-    say("5. Low confidence (name only): assigned by a person")
-    act("L02", Action.VALIDATE, "p.garcia", expect_error="GUARD_BLOCKED")
-    act("L02", Action.CORRECT, "p.garcia", change={"selected_matter_id": "M-1219"},
+    say("5. Low confidence (name only): intake queue, routed by intake staff")
+    act("L02", Action.VALIDATE, "p.garcia", expect_error="NOT_AUTHORIZED")
+    act("L02", Action.CORRECT, "s.ortiz", change={"selected_matter_id": "M-1219"},
+        expect_error="REASON_REQUIRED")
+    act("L02", Action.CORRECT, "s.ortiz", change={"selected_matter_id": "M-1219"},
         reason="client confirmed by phone that she sent this letter")
+    act("L02", Action.VALIDATE, "s.ortiz", expect_error="NOT_AUTHORIZED")  # not on M-1219
     act("L02", Action.VALIDATE, "p.garcia")
 
-    say("6. Exact duplicate: rejected with a reason")
+    say("6. Exact duplicate (blocking): approval refused, rejected with a reason")
+    act("D02", Action.VALIDATE, "p.lee", expect_error="GUARD_BLOCKED")
     act("D02", Action.REJECT, "p.lee", reason="exact duplicate of an earlier upload")
 
-    say("7. Off-matter staff cannot open a record")
+    say("7. Fact conflict: DOB on the document differs from the matter record")
+    act("F02", Action.VALIDATE, "p.lee", expect_error="GUARD_BLOCKED")
+    dob = next(f for f in service.records[ids["F02"]].facts if f.field == "dateOfBirth")
+    act("F02", Action.CORRECT, "p.lee", change={"facts": {dob.fact_id: "11/21/1986"}},
+        reason="provider confirmed the DOB was mistyped (digits transposed)")
+    act("F02", Action.VALIDATE, "p.lee")
+
+    say("8. Off-matter staff cannot open a record")
     try:
         service.view(ids["S01"], USERS["s.baker"])
         steps.append(("s.baker view S01", False))

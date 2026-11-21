@@ -15,7 +15,7 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any, Optional
 
-from .access import MatterIndex, is_on_matter
+from .access import MatterIndex, can_handle_intake, is_on_matter
 from .audit import AuditLog
 from .extraction import Extractor, RuleBasedExtractor, extract_into
 from .filing import INTAKE_QUEUE, FilingReceipt, MockCaseManagementSystem, Notifier
@@ -104,9 +104,9 @@ class IntakeLinkService:
         return record
 
     def can_view(self, actor: Actor, record: CandidateRecord) -> bool:
-        """On the record's matter, or the record has no matter yet (intake queue)."""
+        """On the record's matter; a record with no matter only for intake staff."""
         matter = self.index.get(record.target_matter_id())
-        return matter is None or is_on_matter(actor, matter)
+        return can_handle_intake(actor) if matter is None else is_on_matter(actor, matter)
 
     def view(self, record_id: str, actor: Actor, *, log: bool = True) -> RecordView:
         """Open a record. Refusals are always logged; ``log=False`` skips the
