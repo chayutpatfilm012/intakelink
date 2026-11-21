@@ -14,7 +14,7 @@ import pytest
 
 from intakelink.audit import AuditLog
 from intakelink.guard import (PriorDocument, cross_matter_findings,
-                              duplicate_findings, run_checks)
+                              duplicate_findings, fact_conflict_findings, run_checks)
 from intakelink.intake import DocumentStore, Intake, prepare_text
 from intakelink.models import (CandidateRecord, Document, Fact, FlagType)
 from intakelink.synthetic import gold_facts, load_manifest, matter_index
@@ -106,6 +106,81 @@ def test_no_target_matter_means_no_cross_matter_check():
     assert [f.type for f in result.flags] == [FlagType.LOW_CONFIDENCE]
 
 
+# --- fact conflict (FR-07) -----------------------------------------------------
+def conflicts(facts, target="M-1042"):
+    return fact_conflict_findings(facts, INDEX.get(target), INDEX)
+
+
+def test_target_name_with_a_different_dob_is_a_conflict():
+    facts = [F("clientName", "Whitfield, Dana"), F("dateOfBirth", "03/21/1984"),
+             F("claimNumber", "CLM-55821")]
+    found = conflicts(facts)
+    assert [(c.field, c.page) for c in found] == [("dateOfBirth", 1)]
+    flag = found[0].to_flag()
+    assert flag.type == FlagType.FACT_CONFLICT and flag.blocking
+    assert flag.detail == "date of birth on page 1 differs from the matter record"
+    assert "1984" not in flag.detail and "03/12" not in flag.detail   # record value not shown
+
+
+def test_target_name_with_matching_dob_raises_nothing():
+    assert conflicts(own("M-1042")) == []
+
+
+def test_name_without_a_dob_on_that_page_raises_nothing():
+    facts = [F("clientName", "Dana Whitfield", 1), F("dateOfBirth", "01/01/1990", 2)]
+    assert conflicts(facts) == []
+
+
+def test_unparseable_dob_is_not_compared():
+    assert conflicts([F("clientName", "Dana Whitfield"), F("dateOfBirth", "unknown")]) == []
+
+
+def test_another_clients_name_and_dob_is_not_a_fact_conflict():
+    # Page 2 holds Marcus Bell's name + DOB: tier 2, not a conflict about Dana.
+    facts = own("M-1042") + [F("clientName", "Marcus Bell", 2), F("dateOfBirth", "11/02/1979", 2)]
+    assert conflicts(facts) == []
+    assert tiers(cross_matter_findings(facts, INDEX.get("M-1042"), INDEX))[0][0] == 2
+
+
+def test_shared_name_with_the_other_clients_dob_is_not_a_fact_conflict():
+    # Two different clients named Maria Santos; the 1998 DOB is the other one's.
+    facts = [F("clientName", "Maria Santos"), F("dateOfBirth", "01/07/1998")]
+    assert conflicts(facts, "M-1368") == []
+    assert tiers(cross_matter_findings(facts, INDEX.get("M-1368"), INDEX))[0][0] == 2
+
+
+def test_same_client_on_another_matter_is_not_a_fact_conflict():
+    facts = [F("clientName", "Elliot Marsh"), F("dateOfBirth", "12/12/1981"),
+             F("claimNumber", "CLM-58115")]
+    assert conflicts(facts, "M-1389") == []
+
+
+def test_correcting_the_dob_clears_the_conflict_and_allows_approval():
+    from intakelink.models import Action, ReviewStatus
+    from intakelink.review import ReviewError, review_action
+    from intakelink.synthetic import USERS
+    audit = AuditLog()
+    record = _record("R-0009", b"bill", [F("clientName", "Whitfield, Dana"),
+                                         F("dateOfBirth", "03/21/1984"),
+                                         F("claimNumber", "CLM-55821")])
+    run_checks(record, None, INDEX, [], audit)
+    assert record.has_open(FlagType.FACT_CONFLICT)
+    with pytest.raises(ReviewError) as err:
+        review_action(record, Action.VALIDATE, USERS["p.lee"], index=INDEX, audit=audit,
+                      expected_version=record.version)
+    assert err.value.code == "GUARD_BLOCKED" and "FACT_CONFLICT" in err.value.message
+
+    dob = next(f for f in record.facts if f.field == "dateOfBirth")
+    review_action(record, Action.CORRECT, USERS["p.lee"], index=INDEX, audit=audit,
+                  expected_version=record.version, change={"facts": {dob.fact_id: "03/12/1984"}},
+                  reason="DOB checked against the intake form")
+    run_checks(record, None, INDEX, [], audit)          # checks re-run after the correction
+    assert not record.has_open(FlagType.FACT_CONFLICT)
+    review_action(record, Action.VALIDATE, USERS["p.lee"], index=INDEX, audit=audit,
+                  expected_version=record.version)
+    assert record.review_status == ReviewStatus.APPROVED
+
+
 # --- duplicates ---------------------------------------------------------------
 BILL = ("Bayview Orthopedics\nSTATEMENT OF CHARGES\nDate: 07/20/2026\n"
         "Patient: Whitfield, Dana\nDOB: 03/12/1984\nClaim No.: CLM-55821\n\f"
@@ -134,19 +209,21 @@ def _check(text: str, facts, history, doc_type="medical_bill"):
 def test_exact_duplicate():
     found = _check(BILL, FACTS(), [_prior(BILL, FACTS())])
     assert [(d.kind, d.prior_record_id) for d in found] == [(FlagType.EXACT_DUPLICATE, "R-0001")]
-    assert not found[0].to_flag().blocking
+    assert found[0].to_flag().blocking                 # report §7.5: exact duplicate blocks
 
 
 def test_resent_fax_is_a_possible_duplicate():
     resent = "FAX RECEIVED 2026-10-12 09:14  PAGE 1/2\n" + BILL.replace(": ", ":  ")
     found = _check(resent, FACTS(), [_prior(BILL, FACTS())])
     assert [d.kind for d in found] == [FlagType.POSSIBLE_DUPLICATE]
+    assert not found[0].to_flag().blocking             # warning only
 
 
 def test_revised_statement_is_a_possible_new_version():
     revised = BILL.replace("STATEMENT", "REVISED STATEMENT").replace("$370.00", "$410.00")
     found = _check(revised, FACTS(), [_prior(BILL, FACTS())])
     assert [d.kind for d in found] == [FlagType.POSSIBLE_NEW_VERSION]
+    assert not found[0].to_flag().blocking             # warning only
 
 
 def test_another_statement_for_the_same_patient_is_not_a_duplicate():
@@ -205,6 +282,15 @@ def test_set_cross_matter_flags(checked):
             assert FlagType.CROSS_MATTER_RISK in types, key
         else:
             assert not types & {FlagType.CROSS_MATTER_RISK, FlagType.CROSS_MATTER_NAME}, key
+
+
+def test_set_fact_conflict_flags(checked):
+    for key, (e, record, result) in checked.items():
+        found = [(c.field, c.page) for c in result.conflicts]
+        if e["fact_conflict"]:
+            assert found == [(e["fact_conflict"]["field"], e["fact_conflict"]["page"])], key
+        else:
+            assert found == [], key
 
 
 def test_set_duplicate_flags(checked):

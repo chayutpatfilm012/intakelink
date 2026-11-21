@@ -11,13 +11,21 @@ Cross-matter check (runs once the record has a target matter):
   Flag details name the page and the kind of identifier, never the other
   matter or client, so a reviewer on this matter learns nothing new about it.
 
-Duplicate check, against documents received earlier (all non-blocking; the
-reviewer decides):
-  * EXACT_DUPLICATE:      identical bytes (same SHA-256)
-  * POSSIBLE_NEW_VERSION: same type and identifiers, similar text, and a revision
-    marker ("revised", "amended", "supersedes", ...) the earlier one lacks
-  * POSSIBLE_DUPLICATE:   same type, identifiers and document date, similar text
-    (a re-sent fax or re-scan)
+Fact conflict, FACT_CONFLICT (blocking; FR-07, report §7.5):
+  A name on the document matches the target matter's client, but a date of
+  birth on the same page differs from that matter's record. Not raised when
+  that name + DOB belongs to another client's matter (tier 2 / the matcher
+  cover it). Only dates that parse are compared. The detail names the field
+  and page, never the record's value. The reviewer corrects the fact or the
+  matter (checks re-run), or rejects / escalates with a reason.
+
+Duplicate check, against documents received earlier:
+  * EXACT_DUPLICATE (blocking, report §7.5): identical bytes (same SHA-256).
+    The reviewer rejects it with a reason, or escalates.
+  * POSSIBLE_NEW_VERSION (warning): same type and identifiers, similar text,
+    and a revision marker ("revised", "amended", ...) the earlier one lacks
+  * POSSIBLE_DUPLICATE (warning): same type, identifiers and document date,
+    similar text (a re-sent fax or re-scan)
 
 System code here writes flags through ``review.write_flags`` only; it never
 sets review status.
@@ -107,6 +115,50 @@ def cross_matter_findings(facts: list[Fact], target: Matter,
 
 
 # ---------------------------------------------------------------------------
+# Fact conflict
+# ---------------------------------------------------------------------------
+@dataclass(frozen=True)
+class FactConflictFinding:
+    field: str
+    page: Optional[int]
+    fact_ids: tuple[str, ...]
+
+    def to_flag(self) -> Flag:
+        where = f"page {self.page}" if self.page else "a staff-entered fact"
+        return Flag(FlagType.FACT_CONFLICT, True,
+                    f"date of birth on {where} differs from the matter record")
+
+
+def fact_conflict_findings(facts: list[Fact], target: Matter,
+                           index: MatterIndex) -> list[FactConflictFinding]:
+    """Target client's name with a different DOB on the same page."""
+    t_name = norm_name(target.client_name)
+    t_dob = norm_date(target.date_of_birth)
+    names_in_doc = {norm_name(f.value) for f in facts if f.field == CLIENT_NAME}
+    # DOBs explained by another client whose name is also on the document.
+    other_dobs = {norm_date(m.date_of_birth) for m in index.all()
+                  if m.matter_id != target.matter_id
+                  and not (norm_name(m.client_name) == t_name
+                           and norm_date(m.date_of_birth) == t_dob)
+                  and norm_name(m.client_name) in names_in_doc}
+
+    findings: list[FactConflictFinding] = []
+    name_pages = sorted({f.page for f in facts
+                         if f.field == CLIENT_NAME and norm_name(f.value) == t_name},
+                        key=lambda p: p or 0)
+    for page in name_pages:
+        dobs = [f for f in facts if f.field == DATE_OF_BIRTH and f.page == page]
+        parsed = [(f, norm_date(f.value)) for f in dobs if norm_date(f.value)]
+        if not parsed or any(d == t_dob for _, d in parsed):
+            continue
+        conflicting = [f for f, d in parsed if d not in other_dobs]
+        if conflicting:
+            findings.append(FactConflictFinding(DATE_OF_BIRTH, page,
+                                                tuple(f.fact_id for f in conflicting)))
+    return findings
+
+
+# ---------------------------------------------------------------------------
 # Duplicate checks
 # ---------------------------------------------------------------------------
 @dataclass
@@ -135,8 +187,9 @@ class DuplicateFinding:
         words = {FlagType.EXACT_DUPLICATE: "same file as",
                  FlagType.POSSIBLE_NEW_VERSION: "possible newer version of",
                  FlagType.POSSIBLE_DUPLICATE: "possible re-sent copy of"}[self.kind]
-        return Flag(self.kind, False, f"{words} {self.prior_record_id} "
-                                      f"(text similarity {self.similarity:.2f})")
+        blocking = self.kind == FlagType.EXACT_DUPLICATE   # warnings otherwise
+        return Flag(self.kind, blocking, f"{words} {self.prior_record_id} "
+                                         f"(text similarity {self.similarity:.2f})")
 
 
 _NORMALIZERS = {MATTER_NUMBER: norm_id, CLAIM_NUMBER: norm_id, CLIENT_NAME: norm_name,
@@ -209,6 +262,7 @@ class CheckResult:
     flags: list[Flag]
     cross_matter: list[CrossMatterFinding] = field(default_factory=list)
     duplicates: list[DuplicateFinding] = field(default_factory=list)
+    conflicts: list[FactConflictFinding] = field(default_factory=list)
 
 
 def run_checks(record: CandidateRecord, text: Optional[PreparedText], index: MatterIndex,
@@ -218,11 +272,14 @@ def run_checks(record: CandidateRecord, text: Optional[PreparedText], index: Mat
     flags = run_matching(record, index)
     target = index.get(record.target_matter_id())
     cross = cross_matter_findings(record.facts, target, index) if target else []
+    conflicts = fact_conflict_findings(record.facts, target, index) if target else []
     dups = duplicate_findings(record, text, history)
-    flags += [c.to_flag() for c in cross] + [d.to_flag() for d in dups]
+    flags += ([c.to_flag() for c in cross] + [c.to_flag() for c in conflicts]
+              + [d.to_flag() for d in dups])
     write_flags(record, flags, audit, system_id)
-    return CheckResult(record.flags, cross, dups)
+    return CheckResult(record.flags, cross, dups, conflicts)
 
 
-__all__ = ["CheckResult", "CrossMatterFinding", "DuplicateFinding", "PriorDocument",
-           "cross_matter_findings", "duplicate_findings", "run_checks", "text_similarity"]
+__all__ = ["CheckResult", "CrossMatterFinding", "DuplicateFinding", "FactConflictFinding",
+           "PriorDocument", "cross_matter_findings", "duplicate_findings",
+           "fact_conflict_findings", "run_checks", "text_similarity"]
