@@ -1,0 +1,15 @@
+Northgate Imaging
+(fictional organization; synthetic test document)
+
+STATEMENT OF CHARGES
+Date: 07/23/2026
+
+Claim No.: CLM-62588
+Patient: Haddad, Yusuf
+DOB: 05/09/1970
+Itemized charges
+  99204  New patient visit, moderate complexity      $277.00
+  72040  X-ray, cervical spine, 2-3 views            $142.00
+  97110  Therapeutic exercise, 15 min (x4)           $287.00
+Total due: $706.00
+Remit to the billing office within 30 days of this statement.

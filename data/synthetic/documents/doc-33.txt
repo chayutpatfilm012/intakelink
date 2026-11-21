@@ -1,0 +1,14 @@
+Bayview Orthopedics
+(fictional organization; synthetic test document)
+
+STATEMENT OF CHARGES
+Date: 05/24/2026
+
+Claim No.: CLM-62019
+Patient: Ferreira, Lucia
+Itemized charges
+  99204  New patient visit, moderate complexity      $217.00
+  72040  X-ray, cervical spine, 2-3 views            $96.00
+  97110  Therapeutic exercise, 15 min (x4)           $278.00
+Total due: $591.00
+Remit to the billing office within 30 days of this statement.

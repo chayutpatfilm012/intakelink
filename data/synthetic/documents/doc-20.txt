@@ -1,0 +1,18 @@
+Meadowbrook Rehabilitation
+(fictional organization; synthetic test document)
+
+STATEMENT OF CHARGES
+Date: 05/29/2026
+
+Patient: Siddiqui, Noor
+DOB: 02/03/1999
+Claim No.: CLM-62260
+Itemized charges
+  99204  New patient visit, moderate complexity      $371.00
+  72040  X-ray, cervical spine, 2-3 views            $153.00
+  97110  Therapeutic exercise, 15 min (x4)           $159.00
+
+--- page from another patient's account, scanned with this statement ---
+Patient: Haddad, Yusuf
+Total due: $683.00
+Remit to the billing office within 30 days of this statement.

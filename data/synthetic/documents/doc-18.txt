@@ -1,0 +1,15 @@
+Lakeside Physical Therapy
+(fictional organization; synthetic test document)
+
+STATEMENT OF CHARGES
+Date: 09/24/2026
+
+Patient: Alvarado, Mateo
+DOB: 08/08/2001
+Claim No.: CLM-62019
+Itemized charges
+  99204  New patient visit, moderate complexity      $253.00
+  72040  X-ray, cervical spine, 2-3 views            $197.00
+  97110  Therapeutic exercise, 15 min (x4)           $239.00
+Total due: $689.00
+Remit to the billing office within 30 days of this statement.

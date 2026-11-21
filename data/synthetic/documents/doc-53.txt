@@ -1,0 +1,18 @@
+Bayview Orthopedics
+(fictional organization; synthetic test document)
+
+STATEMENT OF CHARGES
+Date: 01/17/2026
+
+Patient: Mehta, Arjun
+DOB: 11/21/1986
+Claim No.: CLM-59210
+Itemized charges
+  99204  New patient visit, moderate complexity      $249.00
+  72040  X-ray, cervical spine, 2-3 views            $103.00
+  97110  Therapeutic exercise, 15 min (x4)           $296.00
+
+--- page from another patient's account, scanned with this statement ---
+Claim No.: CLM-60310
+Total due: $648.00
+Remit to the billing office within 30 days of this statement.

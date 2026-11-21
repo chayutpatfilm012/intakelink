@@ -1,0 +1,15 @@
+St. Alder Medical Center
+(fictional organization; synthetic test document)
+
+STATEMENT OF CHARGES
+Date: 03/06/2026
+
+Patient: Santos, Maria
+DOB: 08/30/1972
+Claim No.: CLM-60045
+Itemized charges
+  99204  New patient visit, moderate complexity      $260.00
+  72040  X-ray, cervical spine, 2-3 views            $97.00
+  97110  Therapeutic exercise, 15 min (x4)           $210.00
+Total due: $567.00
+Remit to the billing office within 30 days of this statement.

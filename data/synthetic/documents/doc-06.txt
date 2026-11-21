@@ -1,0 +1,13 @@
+Cedar Ridge Insurance
+(fictional organization; synthetic test document)
+
+Claim correspondence
+Date: May 5, 2026
+
+Claim Number: CLM-58803
+Claimant: Tobias Fenwick
+We have received the records submitted to date and are reviewing the
+claim. Please send any further medical bills and a wage-loss statement.
+Our current evaluation amount is $245.00.
+
+Sincerely,

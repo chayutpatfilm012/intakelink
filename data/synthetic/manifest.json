@@ -1,0 +1,2540 @@
+[
+  {
+    "file": "doc-01.txt",
+    "key": "S14",
+    "category": "standard",
+    "channel": "portal",
+    "received_at": "2026-10-05T08:17:00+00:00",
+    "sha256": "d8be5885761395b0556dad87ad5871ae583f5cd6ec6c736297b0a7220b21b259",
+    "document_type": "medical_record",
+    "truth_matter": "M-1244",
+    "candidate_matters": [],
+    "expected_outcome": "CONFIDENT",
+    "cross_matter": null,
+    "duplicate": null,
+    "facts": [
+      {
+        "field": "provider",
+        "value": "St. Alder Medical Center",
+        "page": 1
+      },
+      {
+        "field": "documentDate",
+        "value": "08/12/2026",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Okafor, Desmond",
+        "page": 1
+      },
+      {
+        "field": "dateOfBirth",
+        "value": "06/19/1975",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "file": "doc-02.txt",
+    "key": "S21",
+    "category": "standard",
+    "channel": "scan",
+    "received_at": "2026-10-05T08:34:00+00:00",
+    "sha256": "5fc0a3bf45366a5356646c7a4563e4255728ee0548527293e81bd7453f36f38a",
+    "document_type": "wage_statement",
+    "truth_matter": "M-1312",
+    "candidate_matters": [],
+    "expected_outcome": "CONFIDENT",
+    "cross_matter": null,
+    "duplicate": null,
+    "facts": [
+      {
+        "field": "documentDate",
+        "value": "06/22/2026",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Yusuf Haddad",
+        "page": 1
+      },
+      {
+        "field": "dateOfBirth",
+        "value": "05/09/1970",
+        "page": 1
+      },
+      {
+        "field": "incidentDate",
+        "value": "05/27/2026",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "file": "doc-03.txt",
+    "key": "X07",
+    "category": "cross_matter_tier2",
+    "channel": "upload",
+    "received_at": "2026-10-05T08:51:00+00:00",
+    "sha256": "d34ca50120abc8034581ed021aa7b770598090f693d55acd4a43ec14561c397e",
+    "document_type": "insurer_letter",
+    "truth_matter": "M-1187",
+    "candidate_matters": [],
+    "expected_outcome": "CONFIDENT",
+    "cross_matter": {
+      "matter": "M-1351",
+      "tier": 2,
+      "page": 2
+    },
+    "duplicate": null,
+    "facts": [
+      {
+        "field": "insurer",
+        "value": "Keystone Casualty",
+        "page": 1
+      },
+      {
+        "field": "documentDate",
+        "value": "May 24, 2026",
+        "page": 1
+      },
+      {
+        "field": "claimNumber",
+        "value": "CLM-62019",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Lucia Ferreira",
+        "page": 1
+      },
+      {
+        "field": "incidentDate",
+        "value": "April 17, 2026",
+        "page": 1
+      },
+      {
+        "field": "claimNumber",
+        "value": "CLM-59210",
+        "page": 2
+      }
+    ]
+  },
+  {
+    "file": "doc-04.pdf",
+    "key": "C01",
+    "category": "corrupted",
+    "channel": "email",
+    "received_at": "2026-10-05T09:08:00+00:00",
+    "sha256": "ee388d82a7928ad7efa32f81d4bb78f6768f87a931018972998737de59c7282f",
+    "document_type": null,
+    "truth_matter": null,
+    "candidate_matters": [],
+    "expected_outcome": "EXTRACTION_FAILED",
+    "cross_matter": null,
+    "duplicate": null,
+    "facts": []
+  },
+  {
+    "file": "doc-05.txt",
+    "key": "S18",
+    "category": "standard",
+    "channel": "portal",
+    "received_at": "2026-10-05T09:25:00+00:00",
+    "sha256": "9e9b92188d27b1b5ee287e0f5c0d400b147d86b8c1f386a41db4d4364530a507",
+    "document_type": "insurer_letter",
+    "truth_matter": "M-1276",
+    "candidate_matters": [],
+    "expected_outcome": "CONFIDENT",
+    "cross_matter": null,
+    "duplicate": null,
+    "facts": [
+      {
+        "field": "insurer",
+        "value": "Keystone Casualty",
+        "page": 1
+      },
+      {
+        "field": "documentDate",
+        "value": "September 30, 2026",
+        "page": 1
+      },
+      {
+        "field": "claimNumber",
+        "value": "CLM-64001",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Mateo Alvarado",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "file": "doc-06.txt",
+    "key": "S07",
+    "category": "standard",
+    "channel": "scan",
+    "received_at": "2026-10-05T09:42:00+00:00",
+    "sha256": "0a953ae984fbe62581025023f932c800249ef9c85e1ead7d399a845c7dfe662c",
+    "document_type": "insurer_letter",
+    "truth_matter": "M-1130",
+    "candidate_matters": [],
+    "expected_outcome": "CONFIDENT",
+    "cross_matter": null,
+    "duplicate": null,
+    "facts": [
+      {
+        "field": "insurer",
+        "value": "Cedar Ridge Insurance",
+        "page": 1
+      },
+      {
+        "field": "documentDate",
+        "value": "May 5, 2026",
+        "page": 1
+      },
+      {
+        "field": "claimNumber",
+        "value": "CLM-58803",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Tobias Fenwick",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "file": "doc-07.txt",
+    "key": "D09",
+    "category": "duplicate_original",
+    "channel": "upload",
+    "received_at": "2026-10-05T09:59:00+00:00",
+    "sha256": "011fe59e0a18676d40fffe924622b257de945e98327aef82ff8007545f39ffa5",
+    "document_type": "medical_bill",
+    "truth_matter": "M-1276",
+    "candidate_matters": [],
+    "expected_outcome": "CONFIDENT",
+    "cross_matter": null,
+    "duplicate": null,
+    "facts": [
+      {
+        "field": "provider",
+        "value": "Lakeside Physical Therapy",
+        "page": 1
+      },
+      {
+        "field": "documentDate",
+        "value": "10/02/2026",
+        "page": 1
+      },
+      {
+        "field": "claimNumber",
+        "value": "CLM-64001",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Alvarado, Mateo",
+        "page": 1
+      },
+      {
+        "field": "dateOfBirth",
+        "value": "08/08/2001",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "file": "doc-08.txt",
+    "key": "S01",
+    "category": "standard",
+    "channel": "email",
+    "received_at": "2026-10-05T10:16:00+00:00",
+    "sha256": "d88cbe131fa5578a44a6a65a82a3bbbf08b2cd82c864e45850c16dec3090a605",
+    "document_type": "medical_bill",
+    "truth_matter": "M-1042",
+    "candidate_matters": [],
+    "expected_outcome": "CONFIDENT",
+    "cross_matter": null,
+    "duplicate": null,
+    "facts": [
+      {
+        "field": "provider",
+        "value": "Bayview Orthopedics",
+        "page": 1
+      },
+      {
+        "field": "documentDate",
+        "value": "07/20/2026",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Whitfield, Dana",
+        "page": 1
+      },
+      {
+        "field": "dateOfBirth",
+        "value": "03/12/1984",
+        "page": 1
+      },
+      {
+        "field": "claimNumber",
+        "value": "CLM-55821",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "file": "doc-09.txt",
+    "key": "D10",
+    "category": "duplicate_newer_version",
+    "channel": "portal",
+    "received_at": "2026-10-05T10:33:00+00:00",
+    "sha256": "d97de230648eaa137918efa013fd7d0ebd8c09d47e4bbca650446ddd87aa9fa7",
+    "document_type": "medical_bill",
+    "truth_matter": "M-1276",
+    "candidate_matters": [],
+    "expected_outcome": "CONFIDENT",
+    "cross_matter": null,
+    "duplicate": {
+      "kind": "newer_version",
+      "of": "doc-07.txt"
+    },
+    "facts": [
+      {
+        "field": "provider",
+        "value": "Lakeside Physical Therapy",
+        "page": 1
+      },
+      {
+        "field": "documentDate",
+        "value": "11/01/2026",
+        "page": 1
+      },
+      {
+        "field": "claimNumber",
+        "value": "CLM-64001",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Alvarado, Mateo",
+        "page": 1
+      },
+      {
+        "field": "dateOfBirth",
+        "value": "08/08/2001",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "file": "doc-10.txt",
+    "key": "D03",
+    "category": "duplicate_original",
+    "channel": "scan",
+    "received_at": "2026-10-05T10:50:00+00:00",
+    "sha256": "29a12d8cd3a0ae1b173d822060ef33e85626559f8e3c8d02ab4c9768628e95eb",
+    "document_type": "insurer_letter",
+    "truth_matter": "M-1436",
+    "candidate_matters": [],
+    "expected_outcome": "CONFIDENT",
+    "cross_matter": null,
+    "duplicate": null,
+    "facts": [
+      {
+        "field": "insurer",
+        "value": "Cedar Ridge Insurance",
+        "page": 1
+      },
+      {
+        "field": "documentDate",
+        "value": "March 6, 2026",
+        "page": 1
+      },
+      {
+        "field": "claimNumber",
+        "value": "CLM-61093",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Wendell Pryce",
+        "page": 1
+      },
+      {
+        "field": "incidentDate",
+        "value": "January 29, 2026",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "file": "doc-11.txt",
+    "key": "S23",
+    "category": "standard",
+    "channel": "upload",
+    "received_at": "2026-10-05T11:07:00+00:00",
+    "sha256": "433b93eb6f0a8df4161ff1858b34c9379a3d75180b833b0faaeeb38e7f674c60",
+    "document_type": "medical_record",
+    "truth_matter": "M-1351",
+    "candidate_matters": [],
+    "expected_outcome": "CONFIDENT",
+    "cross_matter": null,
+    "duplicate": null,
+    "facts": [
+      {
+        "field": "provider",
+        "value": "Bayview Orthopedics",
+        "page": 1
+      },
+      {
+        "field": "documentDate",
+        "value": "02/09/2026",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Mehta, Arjun",
+        "page": 1
+      },
+      {
+        "field": "dateOfBirth",
+        "value": "11/21/1986",
+        "page": 1
+      },
+      {
+        "field": "claimNumber",
+        "value": "CLM-59210",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "file": "doc-12.txt",
+    "key": "S22",
+    "category": "standard",
+    "channel": "email",
+    "received_at": "2026-10-05T11:24:00+00:00",
+    "sha256": "84729e4ba72931fccc72b191b5ffecaa052675e22ad17783371204fba8a97e02",
+    "document_type": "insurer_letter",
+    "truth_matter": "M-1335",
+    "candidate_matters": [],
+    "expected_outcome": "CONFIDENT",
+    "cross_matter": null,
+    "duplicate": null,
+    "facts": [
+      {
+        "field": "insurer",
+        "value": "Harborline Mutual",
+        "page": 1
+      },
+      {
+        "field": "documentDate",
+        "value": "August 6, 2026",
+        "page": 1
+      },
+      {
+        "field": "claimNumber",
+        "value": "CLM-63904",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Camille Duval",
+        "page": 1
+      },
+      {
+        "field": "incidentDate",
+        "value": "June 30, 2026",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "file": "doc-13.txt",
+    "key": "X08",
+    "category": "cross_matter_tier2",
+    "channel": "portal",
+    "received_at": "2026-10-05T11:41:00+00:00",
+    "sha256": "aa6ec09c198f999b2bd3093bf09abcb4190e1ec4eb1951915ce4b4ec50ded407",
+    "document_type": "medical_record",
+    "truth_matter": "M-1244",
+    "candidate_matters": [],
+    "expected_outcome": "CONFIDENT",
+    "cross_matter": {
+      "matter": "M-1351",
+      "tier": 2,
+      "page": 3
+    },
+    "duplicate": null,
+    "facts": [
+      {
+        "field": "provider",
+        "value": "St. Alder Medical Center",
+        "page": 1
+      },
+      {
+        "field": "documentDate",
+        "value": "08/10/2026",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Okafor, Desmond",
+        "page": 1
+      },
+      {
+        "field": "dateOfBirth",
+        "value": "06/19/1975",
+        "page": 1
+      },
+      {
+        "field": "claimNumber",
+        "value": "CLM-60772",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Mehta, Arjun",
+        "page": 3
+      },
+      {
+        "field": "dateOfBirth",
+        "value": "11/21/1986",
+        "page": 3
+      }
+    ]
+  },
+  {
+    "file": "doc-14.txt",
+    "key": "A02",
+    "category": "ambiguous",
+    "channel": "scan",
+    "received_at": "2026-10-05T11:58:00+00:00",
+    "sha256": "53f1e71ed48dd6f07a8b1e8f54eb6d6c6442e513099fc5a7cebedf40c8bf7fcd",
+    "document_type": "correspondence",
+    "truth_matter": null,
+    "candidate_matters": [
+      "M-1290",
+      "M-1312"
+    ],
+    "expected_outcome": "AMBIGUOUS_MATCH",
+    "cross_matter": null,
+    "duplicate": null,
+    "facts": [
+      {
+        "field": "documentDate",
+        "value": "April 8, 2026",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Ingrid Solberg",
+        "page": 1
+      },
+      {
+        "field": "dateOfBirth",
+        "value": "October 15, 1983",
+        "page": 1
+      },
+      {
+        "field": "incidentDate",
+        "value": "March 2, 2026",
+        "page": 1
+      },
+      {
+        "field": "claimNumber",
+        "value": "CLM-62588",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "file": "doc-15.txt",
+    "key": "S27",
+    "category": "standard",
+    "channel": "upload",
+    "received_at": "2026-10-05T12:15:00+00:00",
+    "sha256": "a32efb2aa0db98d73b2196f3e4ced6490ceee4c589c165ec91a118d53eeace97",
+    "document_type": "medical_bill",
+    "truth_matter": "M-1407",
+    "candidate_matters": [],
+    "expected_outcome": "CONFIDENT",
+    "cross_matter": null,
+    "duplicate": null,
+    "facts": [
+      {
+        "field": "provider",
+        "value": "Bayview Orthopedics",
+        "page": 1
+      },
+      {
+        "field": "documentDate",
+        "value": "09/19/2026",
+        "page": 1
+      },
+      {
+        "field": "claimNumber",
+        "value": "CLM-63772",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Marsh, Elliot",
+        "page": 1
+      },
+      {
+        "field": "dateOfBirth",
+        "value": "12/12/1981",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "file": "doc-16.txt",
+    "key": "L02",
+    "category": "ambiguous",
+    "channel": "email",
+    "received_at": "2026-10-05T12:32:00+00:00",
+    "sha256": "6a68328fe2e6a7371d2948cb3633fa9b0485a121127308a266e7146364d18fad",
+    "document_type": "correspondence",
+    "truth_matter": null,
+    "candidate_matters": [
+      "M-1219"
+    ],
+    "expected_outcome": "LOW_CONFIDENCE",
+    "cross_matter": null,
+    "duplicate": null,
+    "facts": [
+      {
+        "field": "documentDate",
+        "value": "February 5, 2026",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Hana Kobayashi",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "file": "doc-17.txt",
+    "key": "D04",
+    "category": "duplicate_exact",
+    "channel": "portal",
+    "received_at": "2026-10-05T12:49:00+00:00",
+    "sha256": "29a12d8cd3a0ae1b173d822060ef33e85626559f8e3c8d02ab4c9768628e95eb",
+    "document_type": "insurer_letter",
+    "truth_matter": "M-1436",
+    "candidate_matters": [],
+    "expected_outcome": "CONFIDENT",
+    "cross_matter": null,
+    "duplicate": {
+      "kind": "exact",
+      "of": "doc-10.txt"
+    },
+    "facts": [
+      {
+        "field": "insurer",
+        "value": "Cedar Ridge Insurance",
+        "page": 1
+      },
+      {
+        "field": "documentDate",
+        "value": "March 6, 2026",
+        "page": 1
+      },
+      {
+        "field": "claimNumber",
+        "value": "CLM-61093",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Wendell Pryce",
+        "page": 1
+      },
+      {
+        "field": "incidentDate",
+        "value": "January 29, 2026",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "file": "doc-18.txt",
+    "key": "A06",
+    "category": "ambiguous",
+    "channel": "scan",
+    "received_at": "2026-10-05T13:06:00+00:00",
+    "sha256": "3b2942e5751808bd9df65cc686f1cdabbed81e13d5a3131d6575eb5989a016e0",
+    "document_type": "medical_bill",
+    "truth_matter": null,
+    "candidate_matters": [
+      "M-1187",
+      "M-1276"
+    ],
+    "expected_outcome": "AMBIGUOUS_MATCH",
+    "cross_matter": null,
+    "duplicate": null,
+    "facts": [
+      {
+        "field": "provider",
+        "value": "Lakeside Physical Therapy",
+        "page": 1
+      },
+      {
+        "field": "documentDate",
+        "value": "09/24/2026",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Alvarado, Mateo",
+        "page": 1
+      },
+      {
+        "field": "dateOfBirth",
+        "value": "08/08/2001",
+        "page": 1
+      },
+      {
+        "field": "claimNumber",
+        "value": "CLM-62019",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "file": "doc-19.txt",
+    "key": "S16",
+    "category": "standard",
+    "channel": "upload",
+    "received_at": "2026-10-05T13:23:00+00:00",
+    "sha256": "c0a6938ad7502a4dfd5a06621a39ce91681f0285635e601dbac4323baee6d2d7",
+    "document_type": "medical_bill",
+    "truth_matter": "M-1258",
+    "candidate_matters": [],
+    "expected_outcome": "CONFIDENT",
+    "cross_matter": null,
+    "duplicate": null,
+    "facts": [
+      {
+        "field": "provider",
+        "value": "Meadowbrook Rehabilitation",
+        "page": 1
+      },
+      {
+        "field": "documentDate",
+        "value": "11/30/2025",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Grey, Rosalind",
+        "page": 1
+      },
+      {
+        "field": "dateOfBirth",
+        "value": "02/27/1949",
+        "page": 1
+      },
+      {
+        "field": "incidentDate",
+        "value": "10/06/2025",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "file": "doc-20.txt",
+    "key": "X03",
+    "category": "cross_matter_tier1",
+    "channel": "email",
+    "received_at": "2026-10-05T13:40:00+00:00",
+    "sha256": "343d5f2e707fed413481665338cd5a78be7cdaabbae98ca72a76cf7b2bdde246",
+    "document_type": "medical_bill",
+    "truth_matter": "M-1421",
+    "candidate_matters": [],
+    "expected_outcome": "CONFIDENT",
+    "cross_matter": {
+      "matter": "M-1312",
+      "tier": 1,
+      "page": 2
+    },
+    "duplicate": null,
+    "facts": [
+      {
+        "field": "provider",
+        "value": "Meadowbrook Rehabilitation",
+        "page": 1
+      },
+      {
+        "field": "documentDate",
+        "value": "05/29/2026",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Siddiqui, Noor",
+        "page": 1
+      },
+      {
+        "field": "dateOfBirth",
+        "value": "02/03/1999",
+        "page": 1
+      },
+      {
+        "field": "claimNumber",
+        "value": "CLM-62260",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Haddad, Yusuf",
+        "page": 2
+      }
+    ]
+  },
+  {
+    "file": "doc-21.txt",
+    "key": "X02",
+    "category": "cross_matter_tier1",
+    "channel": "portal",
+    "received_at": "2026-10-05T13:57:00+00:00",
+    "sha256": "ad8acf93b643ac1132edb025e229be4004fb5a08d94409c03fe7ca9d251e5ca1",
+    "document_type": "insurer_letter",
+    "truth_matter": "M-1335",
+    "candidate_matters": [],
+    "expected_outcome": "CONFIDENT",
+    "cross_matter": {
+      "matter": "M-1290",
+      "tier": 1,
+      "page": 2
+    },
+    "duplicate": null,
+    "facts": [
+      {
+        "field": "insurer",
+        "value": "Harborline Mutual",
+        "page": 1
+      },
+      {
+        "field": "documentDate",
+        "value": "August 2, 2026",
+        "page": 1
+      },
+      {
+        "field": "claimNumber",
+        "value": "CLM-63904",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Camille Duval",
+        "page": 1
+      },
+      {
+        "field": "incidentDate",
+        "value": "June 30, 2026",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Ingrid Solberg",
+        "page": 2
+      }
+    ]
+  },
+  {
+    "file": "doc-22.txt",
+    "key": "S03",
+    "category": "standard",
+    "channel": "scan",
+    "received_at": "2026-10-05T14:14:00+00:00",
+    "sha256": "9b5738997327cf0315978ec61fba071976fb400fc36ba4d8dd02bacab0b90b0c",
+    "document_type": "police_report",
+    "truth_matter": "M-2077",
+    "candidate_matters": [],
+    "expected_outcome": "CONFIDENT",
+    "cross_matter": null,
+    "duplicate": null,
+    "facts": [
+      {
+        "field": "documentDate",
+        "value": "2026-06-17",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Marcus Bell",
+        "page": 1
+      },
+      {
+        "field": "dateOfBirth",
+        "value": "1979-11-02",
+        "page": 1
+      },
+      {
+        "field": "incidentDate",
+        "value": "2026-05-02",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "file": "doc-23.txt",
+    "key": "A01",
+    "category": "ambiguous",
+    "channel": "upload",
+    "received_at": "2026-10-05T14:31:00+00:00",
+    "sha256": "32326634a7abc23bd622bc1f128e99f0ef7907ccce3c09e870306b2dc0763022",
+    "document_type": "correspondence",
+    "truth_matter": null,
+    "candidate_matters": [
+      "M-1203",
+      "M-1219"
+    ],
+    "expected_outcome": "AMBIGUOUS_MATCH",
+    "cross_matter": null,
+    "duplicate": null,
+    "facts": [
+      {
+        "field": "documentDate",
+        "value": "January 8, 2026",
+        "page": 1
+      },
+      {
+        "field": "claimNumber",
+        "value": "CLM-59934",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Hana Kobayashi",
+        "page": 1
+      },
+      {
+        "field": "dateOfBirth",
+        "value": "April 2, 1988",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "file": "doc-24.txt",
+    "key": "D11",
+    "category": "duplicate_original",
+    "channel": "email",
+    "received_at": "2026-10-05T14:48:00+00:00",
+    "sha256": "9b7335935a7007343e1982f1cd5f6dcca6b3b1feffc0aaee7e206346798a555e",
+    "document_type": "insurer_letter",
+    "truth_matter": "M-1421",
+    "candidate_matters": [],
+    "expected_outcome": "CONFIDENT",
+    "cross_matter": null,
+    "duplicate": null,
+    "facts": [
+      {
+        "field": "insurer",
+        "value": "Keystone Casualty",
+        "page": 1
+      },
+      {
+        "field": "documentDate",
+        "value": "May 20, 2026",
+        "page": 1
+      },
+      {
+        "field": "claimNumber",
+        "value": "CLM-62260",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Noor Siddiqui",
+        "page": 1
+      },
+      {
+        "field": "incidentDate",
+        "value": "April 8, 2026",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "file": "doc-25.txt",
+    "key": "S12",
+    "category": "standard",
+    "channel": "portal",
+    "received_at": "2026-10-05T15:05:00+00:00",
+    "sha256": "951e6953cd08c8fa4ba50104c0edb84350575141e0ec74fa9d4c0dc8cb91024c",
+    "document_type": "medical_bill",
+    "truth_matter": "M-1219",
+    "candidate_matters": [],
+    "expected_outcome": "CONFIDENT",
+    "cross_matter": null,
+    "duplicate": null,
+    "facts": [
+      {
+        "field": "provider",
+        "value": "Riverside Chiropractic",
+        "page": 1
+      },
+      {
+        "field": "documentDate",
+        "value": "02/05/2026",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Kobayashi, Hana",
+        "page": 1
+      },
+      {
+        "field": "dateOfBirth",
+        "value": "04/02/1988",
+        "page": 1
+      },
+      {
+        "field": "claimNumber",
+        "value": "CLM-63155",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "file": "doc-26.txt",
+    "key": "S08",
+    "category": "standard",
+    "channel": "scan",
+    "received_at": "2026-10-05T15:22:00+00:00",
+    "sha256": "3b90e3df72d01ecf79b1a9d0a351110c10fb4cb0b77bacdc07ff7e09075772f0",
+    "document_type": "medical_record",
+    "truth_matter": "M-1130",
+    "candidate_matters": [],
+    "expected_outcome": "CONFIDENT",
+    "cross_matter": null,
+    "duplicate": null,
+    "facts": [
+      {
+        "field": "provider",
+        "value": "St. Alder Medical Center",
+        "page": 1
+      },
+      {
+        "field": "documentDate",
+        "value": "05/10/2026",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Fenwick, Tobias",
+        "page": 1
+      },
+      {
+        "field": "dateOfBirth",
+        "value": "01/30/1968",
+        "page": 1
+      },
+      {
+        "field": "incidentDate",
+        "value": "03/21/2026",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "file": "doc-27.txt",
+    "key": "L01",
+    "category": "ambiguous",
+    "channel": "upload",
+    "received_at": "2026-10-05T15:39:00+00:00",
+    "sha256": "d4c794c021eb530a06af88d84dee5375101f5c701844178d5189e3eb55abd370",
+    "document_type": "insurer_letter",
+    "truth_matter": null,
+    "candidate_matters": [
+      "M-1368",
+      "M-1372"
+    ],
+    "expected_outcome": "LOW_CONFIDENCE",
+    "cross_matter": null,
+    "duplicate": null,
+    "facts": [
+      {
+        "field": "insurer",
+        "value": "Pinecrest Assurance",
+        "page": 1
+      },
+      {
+        "field": "documentDate",
+        "value": "March 30, 2026",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Maria Santos",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "file": "doc-28.txt",
+    "key": "S19",
+    "category": "standard",
+    "channel": "email",
+    "received_at": "2026-10-05T15:56:00+00:00",
+    "sha256": "852f4425e6fb0fd82a089941f8bb779441dbbf7349a558c117764077b5975b1a",
+    "document_type": "medical_record",
+    "truth_matter": "M-1290",
+    "candidate_matters": [],
+    "expected_outcome": "CONFIDENT",
+    "cross_matter": null,
+    "duplicate": null,
+    "facts": [
+      {
+        "field": "provider",
+        "value": "Riverside Chiropractic",
+        "page": 1
+      },
+      {
+        "field": "documentDate",
+        "value": "03/25/2026",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Solberg, Ingrid",
+        "page": 1
+      },
+      {
+        "field": "dateOfBirth",
+        "value": "10/15/1983",
+        "page": 1
+      },
+      {
+        "field": "incidentDate",
+        "value": "03/02/2026",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "file": "doc-29.txt",
+    "key": "S04",
+    "category": "standard",
+    "channel": "portal",
+    "received_at": "2026-10-05T16:13:00+00:00",
+    "sha256": "3ad6a273787bf7ba6485d957d18ce8e32753d10c7942e0479ad52f5d53db4d53",
+    "document_type": "medical_record",
+    "truth_matter": "M-2077",
+    "candidate_matters": [],
+    "expected_outcome": "CONFIDENT",
+    "cross_matter": null,
+    "duplicate": null,
+    "facts": [
+      {
+        "field": "provider",
+        "value": "Northgate Imaging",
+        "page": 1
+      },
+      {
+        "field": "documentDate",
+        "value": "06/12/2026",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Bell, Marcus",
+        "page": 1
+      },
+      {
+        "field": "dateOfBirth",
+        "value": "11/02/1979",
+        "page": 1
+      },
+      {
+        "field": "claimNumber",
+        "value": "CLM-60310",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "file": "doc-30.txt",
+    "key": "D05",
+    "category": "duplicate_original",
+    "channel": "scan",
+    "received_at": "2026-10-05T16:30:00+00:00",
+    "sha256": "14003af33ece2c972534055e7bf3cdda45553f374f6096f121e742bc537f675d",
+    "document_type": "police_report",
+    "truth_matter": "M-1244",
+    "candidate_matters": [],
+    "expected_outcome": "CONFIDENT",
+    "cross_matter": null,
+    "duplicate": null,
+    "facts": [
+      {
+        "field": "documentDate",
+        "value": "2026-07-29",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Desmond Okafor",
+        "page": 1
+      },
+      {
+        "field": "dateOfBirth",
+        "value": "1975-06-19",
+        "page": 1
+      },
+      {
+        "field": "incidentDate",
+        "value": "2026-07-03",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "file": "doc-31.txt",
+    "key": "A04",
+    "category": "ambiguous",
+    "channel": "upload",
+    "received_at": "2026-10-05T16:47:00+00:00",
+    "sha256": "5b4b672e64b52b550a8597a404a6acbefb6a8c6b54bec1e1ad4071f28038c948",
+    "document_type": "medical_bill",
+    "truth_matter": null,
+    "candidate_matters": [
+      "M-1389",
+      "M-1407"
+    ],
+    "expected_outcome": "AMBIGUOUS_MATCH",
+    "cross_matter": null,
+    "duplicate": null,
+    "facts": [
+      {
+        "field": "provider",
+        "value": "Bayview Orthopedics",
+        "page": 1
+      },
+      {
+        "field": "documentDate",
+        "value": "08/30/2026",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Marsh, Elliot",
+        "page": 1
+      },
+      {
+        "field": "dateOfBirth",
+        "value": "12/12/1981",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "file": "doc-32.txt",
+    "key": "S09",
+    "category": "standard",
+    "channel": "email",
+    "received_at": "2026-10-05T17:04:00+00:00",
+    "sha256": "83d197a6ef09d23193f174fc62cad2d8312cfa553d49bc6ddc82d24df43cf601",
+    "document_type": "wage_statement",
+    "truth_matter": "M-1187",
+    "candidate_matters": [],
+    "expected_outcome": "CONFIDENT",
+    "cross_matter": null,
+    "duplicate": null,
+    "facts": [
+      {
+        "field": "documentDate",
+        "value": "06/04/2026",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Lucia Ferreira",
+        "page": 1
+      },
+      {
+        "field": "dateOfBirth",
+        "value": "12/05/1995",
+        "page": 1
+      },
+      {
+        "field": "incidentDate",
+        "value": "04/17/2026",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "file": "doc-33.txt",
+    "key": "S10",
+    "category": "standard",
+    "channel": "portal",
+    "received_at": "2026-10-05T17:21:00+00:00",
+    "sha256": "2b76e561613c4408c7b6c8f9c169b7c7a9ee44ae761992b2625ca590a45dfe05",
+    "document_type": "medical_bill",
+    "truth_matter": "M-1187",
+    "candidate_matters": [],
+    "expected_outcome": "CONFIDENT",
+    "cross_matter": null,
+    "duplicate": null,
+    "facts": [
+      {
+        "field": "provider",
+        "value": "Bayview Orthopedics",
+        "page": 1
+      },
+      {
+        "field": "documentDate",
+        "value": "05/24/2026",
+        "page": 1
+      },
+      {
+        "field": "claimNumber",
+        "value": "CLM-62019",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Ferreira, Lucia",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "file": "doc-34.txt",
+    "key": "S06",
+    "category": "standard",
+    "channel": "scan",
+    "received_at": "2026-10-05T17:38:00+00:00",
+    "sha256": "4b89f938cc444ef948eee57089170990fe58617e14566a1d19d8c64855b4ea8f",
+    "document_type": "correspondence",
+    "truth_matter": "M-1105",
+    "candidate_matters": [],
+    "expected_outcome": "CONFIDENT",
+    "cross_matter": null,
+    "duplicate": null,
+    "facts": [
+      {
+        "field": "documentDate",
+        "value": "March 8, 2026",
+        "page": 1
+      },
+      {
+        "field": "matterNumber",
+        "value": "M-1105",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Priya Raman",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "file": "doc-35.txt",
+    "key": "S13",
+    "category": "standard",
+    "channel": "upload",
+    "received_at": "2026-10-05T17:55:00+00:00",
+    "sha256": "fc82ea5c804c73afd73b312922bb2f557593220c25c88a3f106a364c8ef3e81d",
+    "document_type": "insurer_letter",
+    "truth_matter": "M-1219",
+    "candidate_matters": [],
+    "expected_outcome": "CONFIDENT",
+    "cross_matter": null,
+    "duplicate": null,
+    "facts": [
+      {
+        "field": "insurer",
+        "value": "Harborline Mutual",
+        "page": 1
+      },
+      {
+        "field": "documentDate",
+        "value": "February 14, 2026",
+        "page": 1
+      },
+      {
+        "field": "claimNumber",
+        "value": "CLM-63155",
+        "page": 1
+      },
+      {
+        "field": "incidentDate",
+        "value": "January 11, 2026",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "file": "doc-36.txt",
+    "key": "X05",
+    "category": "cross_matter_tier1",
+    "channel": "email",
+    "received_at": "2026-10-05T18:12:00+00:00",
+    "sha256": "d06aba13c74023e826277098568f9a2cc9b71a3d0ea58bd1b681eae771123e28",
+    "document_type": "correspondence",
+    "truth_matter": "M-1219",
+    "candidate_matters": [],
+    "expected_outcome": "CONFIDENT",
+    "cross_matter": {
+      "matter": "M-1187",
+      "tier": 1,
+      "page": 2
+    },
+    "duplicate": null,
+    "facts": [
+      {
+        "field": "documentDate",
+        "value": "February 11, 2026",
+        "page": 1
+      },
+      {
+        "field": "matterNumber",
+        "value": "M-1219",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Hana Kobayashi",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Lucia Ferreira",
+        "page": 2
+      }
+    ]
+  },
+  {
+    "file": "doc-37.txt",
+    "key": "S30",
+    "category": "standard",
+    "channel": "portal",
+    "received_at": "2026-10-05T18:29:00+00:00",
+    "sha256": "e4cca182a95c372b5d46bbfe6b941a11ed6a7bdc6c9c89b79b38a18cb8584c3e",
+    "document_type": "police_report",
+    "truth_matter": "M-1436",
+    "candidate_matters": [],
+    "expected_outcome": "CONFIDENT",
+    "cross_matter": null,
+    "duplicate": null,
+    "facts": [
+      {
+        "field": "documentDate",
+        "value": "2026-03-24",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Wendell Pryce",
+        "page": 1
+      },
+      {
+        "field": "dateOfBirth",
+        "value": "1965-07-07",
+        "page": 1
+      },
+      {
+        "field": "incidentDate",
+        "value": "2026-01-29",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "file": "doc-38.txt",
+    "key": "L04",
+    "category": "ambiguous",
+    "channel": "scan",
+    "received_at": "2026-10-05T18:46:00+00:00",
+    "sha256": "f7bd71acc4840bfd11053725732e199d2d78c5397513d6986b0bc73ac2c07382",
+    "document_type": "insurer_letter",
+    "truth_matter": null,
+    "candidate_matters": [
+      "M-1372",
+      "M-1368"
+    ],
+    "expected_outcome": "LOW_CONFIDENCE",
+    "cross_matter": null,
+    "duplicate": null,
+    "facts": [
+      {
+        "field": "insurer",
+        "value": "Summit Fidelity",
+        "page": 1
+      },
+      {
+        "field": "documentDate",
+        "value": "October 9, 2026",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Maria Santos",
+        "page": 1
+      },
+      {
+        "field": "incidentDate",
+        "value": "September 5, 2026",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "file": "doc-39.txt",
+    "key": "D01",
+    "category": "duplicate_original",
+    "channel": "upload",
+    "received_at": "2026-10-05T19:03:00+00:00",
+    "sha256": "7bc2b4f6a7dad674493cceee209de1872cab51ea6c39f04d5a8d451012221812",
+    "document_type": "medical_bill",
+    "truth_matter": "M-1203",
+    "candidate_matters": [],
+    "expected_outcome": "CONFIDENT",
+    "cross_matter": null,
+    "duplicate": null,
+    "facts": [
+      {
+        "field": "provider",
+        "value": "Northgate Imaging",
+        "page": 1
+      },
+      {
+        "field": "documentDate",
+        "value": "01/13/2026",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Achterberg, Gideon",
+        "page": 1
+      },
+      {
+        "field": "dateOfBirth",
+        "value": "09/14/1957",
+        "page": 1
+      },
+      {
+        "field": "claimNumber",
+        "value": "CLM-59934",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "file": "doc-40.txt",
+    "key": "S05",
+    "category": "standard",
+    "channel": "email",
+    "received_at": "2026-10-05T19:20:00+00:00",
+    "sha256": "1b681829f70503d60422836173b3611e9c7d209d51d17d338a5f438e8d308abe",
+    "document_type": "medical_bill",
+    "truth_matter": "M-1105",
+    "candidate_matters": [],
+    "expected_outcome": "CONFIDENT",
+    "cross_matter": null,
+    "duplicate": null,
+    "facts": [
+      {
+        "field": "provider",
+        "value": "Lakeside Physical Therapy",
+        "page": 1
+      },
+      {
+        "field": "documentDate",
+        "value": "03/26/2026",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Raman, Priya",
+        "page": 1
+      },
+      {
+        "field": "dateOfBirth",
+        "value": "07/23/1991",
+        "page": 1
+      },
+      {
+        "field": "incidentDate",
+        "value": "02/09/2026",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "file": "doc-41.txt",
+    "key": "X06",
+    "category": "cross_matter_tier2",
+    "channel": "portal",
+    "received_at": "2026-10-05T19:37:00+00:00",
+    "sha256": "de0321aef392c3d88752de9047391310da3bf62c3ce5ba08067264807b6bd382",
+    "document_type": "medical_bill",
+    "truth_matter": "M-1105",
+    "candidate_matters": [],
+    "expected_outcome": "CONFIDENT",
+    "cross_matter": {
+      "matter": "M-1203",
+      "tier": 2,
+      "page": 2
+    },
+    "duplicate": null,
+    "facts": [
+      {
+        "field": "provider",
+        "value": "Lakeside Physical Therapy",
+        "page": 1
+      },
+      {
+        "field": "documentDate",
+        "value": "03/02/2026",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Raman, Priya",
+        "page": 1
+      },
+      {
+        "field": "dateOfBirth",
+        "value": "07/23/1991",
+        "page": 1
+      },
+      {
+        "field": "claimNumber",
+        "value": "CLM-61477",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Achterberg, Gideon",
+        "page": 2
+      },
+      {
+        "field": "dateOfBirth",
+        "value": "09/14/1957",
+        "page": 2
+      }
+    ]
+  },
+  {
+    "file": "doc-42.txt",
+    "key": "S26",
+    "category": "standard",
+    "channel": "scan",
+    "received_at": "2026-10-05T19:54:00+00:00",
+    "sha256": "19f85ecfdda6c3aa915b5406bc05fafe26707fb46c9d3b6f339d1571eb510d04",
+    "document_type": "insurer_letter",
+    "truth_matter": "M-1389",
+    "candidate_matters": [],
+    "expected_outcome": "CONFIDENT",
+    "cross_matter": null,
+    "duplicate": null,
+    "facts": [
+      {
+        "field": "insurer",
+        "value": "Harborline Mutual",
+        "page": 1
+      },
+      {
+        "field": "documentDate",
+        "value": "October 10, 2025",
+        "page": 1
+      },
+      {
+        "field": "claimNumber",
+        "value": "CLM-58115",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Elliot Marsh",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "file": "doc-43.txt",
+    "key": "S24",
+    "category": "standard",
+    "channel": "upload",
+    "received_at": "2026-10-05T20:11:00+00:00",
+    "sha256": "ed19691b76a19004009344149948cb461b8d14fe04c9d860285a84d503069046",
+    "document_type": "medical_bill",
+    "truth_matter": "M-1368",
+    "candidate_matters": [],
+    "expected_outcome": "CONFIDENT",
+    "cross_matter": null,
+    "duplicate": null,
+    "facts": [
+      {
+        "field": "provider",
+        "value": "St. Alder Medical Center",
+        "page": 1
+      },
+      {
+        "field": "documentDate",
+        "value": "03/06/2026",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Santos, Maria",
+        "page": 1
+      },
+      {
+        "field": "dateOfBirth",
+        "value": "08/30/1972",
+        "page": 1
+      },
+      {
+        "field": "claimNumber",
+        "value": "CLM-60045",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "file": "doc-44.txt",
+    "key": "D07",
+    "category": "duplicate_original",
+    "channel": "email",
+    "received_at": "2026-10-05T20:28:00+00:00",
+    "sha256": "f1e18de1e4776a2d01b730e5bbec1bcb25445dcdd6f6ef7fd604290c3c0d76eb",
+    "document_type": "medical_record",
+    "truth_matter": "M-1130",
+    "candidate_matters": [],
+    "expected_outcome": "CONFIDENT",
+    "cross_matter": null,
+    "duplicate": null,
+    "facts": [
+      {
+        "field": "provider",
+        "value": "St. Alder Medical Center",
+        "page": 1
+      },
+      {
+        "field": "documentDate",
+        "value": "05/12/2026",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Fenwick, Tobias",
+        "page": 1
+      },
+      {
+        "field": "dateOfBirth",
+        "value": "01/30/1968",
+        "page": 1
+      },
+      {
+        "field": "incidentDate",
+        "value": "03/21/2026",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "file": "doc-45.txt",
+    "key": "X10",
+    "category": "cross_matter_tier2",
+    "channel": "portal",
+    "received_at": "2026-10-05T20:45:00+00:00",
+    "sha256": "de2025e20e8bf4646ecd9a43acf666dc1a1fd635849e415bbe1b82a1fc8e53b6",
+    "document_type": "correspondence",
+    "truth_matter": "M-1290",
+    "candidate_matters": [],
+    "expected_outcome": "CONFIDENT",
+    "cross_matter": {
+      "matter": "M-1105",
+      "tier": 2,
+      "page": 2
+    },
+    "duplicate": null,
+    "facts": [
+      {
+        "field": "documentDate",
+        "value": "March 28, 2026",
+        "page": 1
+      },
+      {
+        "field": "matterNumber",
+        "value": "M-1290",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Ingrid Solberg",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Priya Raman",
+        "page": 2
+      },
+      {
+        "field": "dateOfBirth",
+        "value": "July 23, 1991",
+        "page": 2
+      }
+    ]
+  },
+  {
+    "file": "doc-46.txt",
+    "key": "D12",
+    "category": "duplicate_newer_version",
+    "channel": "scan",
+    "received_at": "2026-10-05T21:02:00+00:00",
+    "sha256": "2f8e3ccd64dacb14be95726685baab1342bbfbdaaaafe7ed7e3f213f8f375c40",
+    "document_type": "insurer_letter",
+    "truth_matter": "M-1421",
+    "candidate_matters": [],
+    "expected_outcome": "CONFIDENT",
+    "cross_matter": null,
+    "duplicate": {
+      "kind": "newer_version",
+      "of": "doc-24.txt"
+    },
+    "facts": [
+      {
+        "field": "insurer",
+        "value": "Keystone Casualty",
+        "page": 1
+      },
+      {
+        "field": "documentDate",
+        "value": "June 19, 2026",
+        "page": 1
+      },
+      {
+        "field": "claimNumber",
+        "value": "CLM-62260",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Noor Siddiqui",
+        "page": 1
+      },
+      {
+        "field": "incidentDate",
+        "value": "April 8, 2026",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "file": "doc-47.txt",
+    "key": "A05",
+    "category": "ambiguous",
+    "channel": "upload",
+    "received_at": "2026-10-05T21:19:00+00:00",
+    "sha256": "7b1a46b369ff69255557256be571304247eece2312cf79ee632f878288abe639",
+    "document_type": "correspondence",
+    "truth_matter": null,
+    "candidate_matters": [
+      "M-1042",
+      "M-1335"
+    ],
+    "expected_outcome": "AMBIGUOUS_MATCH",
+    "cross_matter": null,
+    "duplicate": null,
+    "facts": [
+      {
+        "field": "documentDate",
+        "value": "July 4, 2026",
+        "page": 1
+      },
+      {
+        "field": "matterNumber",
+        "value": "M-1042",
+        "page": 1
+      },
+      {
+        "field": "claimNumber",
+        "value": "CLM-63904",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Camille Duval",
+        "page": 1
+      },
+      {
+        "field": "dateOfBirth",
+        "value": "March 31, 1993",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "file": "doc-48.txt",
+    "key": "S15",
+    "category": "standard",
+    "channel": "email",
+    "received_at": "2026-10-05T21:36:00+00:00",
+    "sha256": "a0d0ef17eb42cbce15e100c54c2c831bf2237172c78451881cef7933d5b8b964",
+    "document_type": "correspondence",
+    "truth_matter": "M-1258",
+    "candidate_matters": [],
+    "expected_outcome": "CONFIDENT",
+    "cross_matter": null,
+    "duplicate": null,
+    "facts": [
+      {
+        "field": "documentDate",
+        "value": "November 29, 2025",
+        "page": 1
+      },
+      {
+        "field": "matterNumber",
+        "value": "M-1258",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Rosalind Grey",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "file": "doc-49.txt",
+    "key": "S29",
+    "category": "standard",
+    "channel": "portal",
+    "received_at": "2026-10-05T21:53:00+00:00",
+    "sha256": "87ded4d7b0ac3456f1de7505add6ce8230fda3c0d47cae64ac0e5e128c37376a",
+    "document_type": "correspondence",
+    "truth_matter": "M-1436",
+    "candidate_matters": [],
+    "expected_outcome": "CONFIDENT",
+    "cross_matter": null,
+    "duplicate": null,
+    "facts": [
+      {
+        "field": "documentDate",
+        "value": "March 23, 2026",
+        "page": 1
+      },
+      {
+        "field": "matterNumber",
+        "value": "M-1436",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Wendell Pryce",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "file": "doc-50.txt",
+    "key": "L03",
+    "category": "ambiguous",
+    "channel": "scan",
+    "received_at": "2026-10-05T22:10:00+00:00",
+    "sha256": "6ec59111889f07c7bf2611cf79ba5161b80b045d2c552ae27f66625a36fac16d",
+    "document_type": "police_report",
+    "truth_matter": null,
+    "candidate_matters": [
+      "M-1244"
+    ],
+    "expected_outcome": "LOW_CONFIDENCE",
+    "cross_matter": null,
+    "duplicate": null,
+    "facts": [
+      {
+        "field": "documentDate",
+        "value": "2026-08-01",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Desmon Okafor",
+        "page": 1
+      },
+      {
+        "field": "incidentDate",
+        "value": "2026-07-03",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "file": "doc-51.txt",
+    "key": "S11",
+    "category": "standard",
+    "channel": "upload",
+    "received_at": "2026-10-05T22:27:00+00:00",
+    "sha256": "d0b40c16097dd32db6b5ba6707669990d4a9192c398cd2122d20b463c01dacf8",
+    "document_type": "police_report",
+    "truth_matter": "M-1203",
+    "candidate_matters": [],
+    "expected_outcome": "CONFIDENT",
+    "cross_matter": null,
+    "duplicate": null,
+    "facts": [
+      {
+        "field": "documentDate",
+        "value": "2025-12-22",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Gideon Achterberg",
+        "page": 1
+      },
+      {
+        "field": "dateOfBirth",
+        "value": "1957-09-14",
+        "page": 1
+      },
+      {
+        "field": "incidentDate",
+        "value": "2025-11-28",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "file": "doc-52.txt",
+    "key": "S25",
+    "category": "standard",
+    "channel": "email",
+    "received_at": "2026-10-05T22:44:00+00:00",
+    "sha256": "3304bdc68fda8d5f9a37db306e1dcdb56d9db4975b3e0635ef53fc9eb72afb9e",
+    "document_type": "police_report",
+    "truth_matter": "M-1372",
+    "candidate_matters": [],
+    "expected_outcome": "CONFIDENT",
+    "cross_matter": null,
+    "duplicate": null,
+    "facts": [
+      {
+        "field": "documentDate",
+        "value": "2026-10-15",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Maria Santos",
+        "page": 1
+      },
+      {
+        "field": "dateOfBirth",
+        "value": "1998-01-07",
+        "page": 1
+      },
+      {
+        "field": "incidentDate",
+        "value": "2026-09-05",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "file": "doc-53.txt",
+    "key": "X09",
+    "category": "cross_matter_tier2",
+    "channel": "portal",
+    "received_at": "2026-10-05T23:01:00+00:00",
+    "sha256": "0c6a1848a6f2e6650089ee48048f65087254483a322fcf2ab1661bb0d594fdc0",
+    "document_type": "medical_bill",
+    "truth_matter": "M-1351",
+    "candidate_matters": [],
+    "expected_outcome": "CONFIDENT",
+    "cross_matter": {
+      "matter": "M-2077",
+      "tier": 2,
+      "page": 2
+    },
+    "duplicate": null,
+    "facts": [
+      {
+        "field": "provider",
+        "value": "Bayview Orthopedics",
+        "page": 1
+      },
+      {
+        "field": "documentDate",
+        "value": "01/17/2026",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Mehta, Arjun",
+        "page": 1
+      },
+      {
+        "field": "dateOfBirth",
+        "value": "11/21/1986",
+        "page": 1
+      },
+      {
+        "field": "claimNumber",
+        "value": "CLM-59210",
+        "page": 1
+      },
+      {
+        "field": "claimNumber",
+        "value": "CLM-60310",
+        "page": 2
+      }
+    ]
+  },
+  {
+    "file": "doc-54.txt",
+    "key": "S28",
+    "category": "standard",
+    "channel": "scan",
+    "received_at": "2026-10-05T23:18:00+00:00",
+    "sha256": "a655efb32f7e24c9d08384b2414a2635ed850e85b12ddcba83d58a42ef536d75",
+    "document_type": "medical_record",
+    "truth_matter": "M-1421",
+    "candidate_matters": [],
+    "expected_outcome": "CONFIDENT",
+    "cross_matter": null,
+    "duplicate": null,
+    "facts": [
+      {
+        "field": "provider",
+        "value": "Meadowbrook Rehabilitation",
+        "page": 1
+      },
+      {
+        "field": "documentDate",
+        "value": "05/07/2026",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Siddiqui, Noor",
+        "page": 1
+      },
+      {
+        "field": "dateOfBirth",
+        "value": "02/03/1999",
+        "page": 1
+      },
+      {
+        "field": "incidentDate",
+        "value": "04/08/2026",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "file": "doc-55.txt",
+    "key": "S02",
+    "category": "standard",
+    "channel": "upload",
+    "received_at": "2026-10-05T23:35:00+00:00",
+    "sha256": "b2920b69230b719dfd313082b3f4799d51fb73b7b7b9593a96a764609218b3fd",
+    "document_type": "insurer_letter",
+    "truth_matter": "M-1042",
+    "candidate_matters": [],
+    "expected_outcome": "CONFIDENT",
+    "cross_matter": null,
+    "duplicate": null,
+    "facts": [
+      {
+        "field": "insurer",
+        "value": "Harborline Mutual",
+        "page": 1
+      },
+      {
+        "field": "documentDate",
+        "value": "July 27, 2026",
+        "page": 1
+      },
+      {
+        "field": "claimNumber",
+        "value": "CLM-55821",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Dana Whitfield",
+        "page": 1
+      },
+      {
+        "field": "incidentDate",
+        "value": "June 14, 2026",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "file": "doc-56.txt",
+    "key": "D08",
+    "category": "duplicate_probable",
+    "channel": "email",
+    "received_at": "2026-10-05T23:52:00+00:00",
+    "sha256": "60174c560cf776f54a2bda2c567446dbf853a62d0a92aac9f59a50867407500a",
+    "document_type": "medical_record",
+    "truth_matter": "M-1130",
+    "candidate_matters": [],
+    "expected_outcome": "CONFIDENT",
+    "cross_matter": null,
+    "duplicate": {
+      "kind": "probable",
+      "of": "doc-44.txt"
+    },
+    "facts": [
+      {
+        "field": "provider",
+        "value": "St. Alder Medical Center",
+        "page": 1
+      },
+      {
+        "field": "documentDate",
+        "value": "05/12/2026",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Fenwick, Tobias",
+        "page": 1
+      },
+      {
+        "field": "dateOfBirth",
+        "value": "01/30/1968",
+        "page": 1
+      },
+      {
+        "field": "incidentDate",
+        "value": "03/21/2026",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "file": "doc-57.txt",
+    "key": "D02",
+    "category": "duplicate_exact",
+    "channel": "portal",
+    "received_at": "2026-10-06T00:09:00+00:00",
+    "sha256": "7bc2b4f6a7dad674493cceee209de1872cab51ea6c39f04d5a8d451012221812",
+    "document_type": "medical_bill",
+    "truth_matter": "M-1203",
+    "candidate_matters": [],
+    "expected_outcome": "CONFIDENT",
+    "cross_matter": null,
+    "duplicate": {
+      "kind": "exact",
+      "of": "doc-39.txt"
+    },
+    "facts": [
+      {
+        "field": "provider",
+        "value": "Northgate Imaging",
+        "page": 1
+      },
+      {
+        "field": "documentDate",
+        "value": "01/13/2026",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Achterberg, Gideon",
+        "page": 1
+      },
+      {
+        "field": "dateOfBirth",
+        "value": "09/14/1957",
+        "page": 1
+      },
+      {
+        "field": "claimNumber",
+        "value": "CLM-59934",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "file": "doc-58.txt",
+    "key": "X04",
+    "category": "cross_matter_tier1",
+    "channel": "scan",
+    "received_at": "2026-10-06T00:26:00+00:00",
+    "sha256": "be1c3b70ec602571c38c37c1d37aea177282c488ec012d454107f303e52f7820",
+    "document_type": "police_report",
+    "truth_matter": "M-1258",
+    "candidate_matters": [],
+    "expected_outcome": "CONFIDENT",
+    "cross_matter": {
+      "matter": "M-1436",
+      "tier": 1,
+      "page": 2
+    },
+    "duplicate": null,
+    "facts": [
+      {
+        "field": "documentDate",
+        "value": "2025-11-18",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Rosalind Grey",
+        "page": 1
+      },
+      {
+        "field": "dateOfBirth",
+        "value": "1949-02-27",
+        "page": 1
+      },
+      {
+        "field": "incidentDate",
+        "value": "2025-10-06",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Wendell Pryce",
+        "page": 2
+      }
+    ]
+  },
+  {
+    "file": "doc-59.txt",
+    "key": "X01",
+    "category": "cross_matter_tier1",
+    "channel": "upload",
+    "received_at": "2026-10-06T00:43:00+00:00",
+    "sha256": "4d806834ac6c3bcdba4b3483cdf5e4892daca530d0969f8897be2d61a64541d3",
+    "document_type": "medical_record",
+    "truth_matter": "M-1042",
+    "candidate_matters": [],
+    "expected_outcome": "CONFIDENT",
+    "cross_matter": {
+      "matter": "M-2077",
+      "tier": 1,
+      "page": 2
+    },
+    "duplicate": null,
+    "facts": [
+      {
+        "field": "provider",
+        "value": "Bayview Orthopedics",
+        "page": 1
+      },
+      {
+        "field": "documentDate",
+        "value": "08/06/2026",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Whitfield, Dana",
+        "page": 1
+      },
+      {
+        "field": "dateOfBirth",
+        "value": "03/12/1984",
+        "page": 1
+      },
+      {
+        "field": "claimNumber",
+        "value": "CLM-55821",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Bell, Marcus",
+        "page": 2
+      }
+    ]
+  },
+  {
+    "file": "doc-60.txt",
+    "key": "S20",
+    "category": "standard",
+    "channel": "email",
+    "received_at": "2026-10-06T01:00:00+00:00",
+    "sha256": "9938e9f78481b525ed74c875e8b51b9130ab5794b08f3279dada670cf27cc5e4",
+    "document_type": "medical_bill",
+    "truth_matter": "M-1312",
+    "candidate_matters": [],
+    "expected_outcome": "CONFIDENT",
+    "cross_matter": null,
+    "duplicate": null,
+    "facts": [
+      {
+        "field": "provider",
+        "value": "Northgate Imaging",
+        "page": 1
+      },
+      {
+        "field": "documentDate",
+        "value": "07/23/2026",
+        "page": 1
+      },
+      {
+        "field": "claimNumber",
+        "value": "CLM-62588",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Haddad, Yusuf",
+        "page": 1
+      },
+      {
+        "field": "dateOfBirth",
+        "value": "05/09/1970",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "file": "doc-61.txt",
+    "key": "A03",
+    "category": "ambiguous",
+    "channel": "portal",
+    "received_at": "2026-10-06T01:17:00+00:00",
+    "sha256": "8ef699825d629f716d5e6189292fd59296d45d862bc4fc2db1a5535f0f0493bf",
+    "document_type": "insurer_letter",
+    "truth_matter": null,
+    "candidate_matters": [
+      "M-1389",
+      "M-1407"
+    ],
+    "expected_outcome": "AMBIGUOUS_MATCH",
+    "cross_matter": null,
+    "duplicate": null,
+    "facts": [
+      {
+        "field": "insurer",
+        "value": "Harborline Mutual",
+        "page": 1
+      },
+      {
+        "field": "documentDate",
+        "value": "October 17, 2025",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Elliot Marsh",
+        "page": 1
+      },
+      {
+        "field": "dateOfBirth",
+        "value": "December 12, 1981",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "file": "doc-62.txt",
+    "key": "C02",
+    "category": "corrupted",
+    "channel": "scan",
+    "received_at": "2026-10-06T01:34:00+00:00",
+    "sha256": "726832db5341497497bae12c75fe0b4567a0af5f04a8c996dfee378862da9f6c",
+    "document_type": null,
+    "truth_matter": null,
+    "candidate_matters": [],
+    "expected_outcome": "EXTRACTION_FAILED",
+    "cross_matter": null,
+    "duplicate": null,
+    "facts": []
+  },
+  {
+    "file": "doc-63.txt",
+    "key": "D06",
+    "category": "duplicate_probable",
+    "channel": "upload",
+    "received_at": "2026-10-06T01:51:00+00:00",
+    "sha256": "4dc75f45c88639bdd901beb6218dcf6ee5ef466b89b5f0f547704e9d02940f6b",
+    "document_type": "police_report",
+    "truth_matter": "M-1244",
+    "candidate_matters": [],
+    "expected_outcome": "CONFIDENT",
+    "cross_matter": null,
+    "duplicate": {
+      "kind": "probable",
+      "of": "doc-30.txt"
+    },
+    "facts": [
+      {
+        "field": "documentDate",
+        "value": "2026-07-29",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Desmond Okafor",
+        "page": 1
+      },
+      {
+        "field": "dateOfBirth",
+        "value": "1975-06-19",
+        "page": 1
+      },
+      {
+        "field": "incidentDate",
+        "value": "2026-07-03",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "file": "doc-64.txt",
+    "key": "S17",
+    "category": "standard",
+    "channel": "email",
+    "received_at": "2026-10-06T02:08:00+00:00",
+    "sha256": "554419e26a49aee30f20bed2720ad0b814f808d11a82153b71ace7e89eb9416d",
+    "document_type": "police_report",
+    "truth_matter": "M-1276",
+    "candidate_matters": [],
+    "expected_outcome": "CONFIDENT",
+    "cross_matter": null,
+    "duplicate": null,
+    "facts": [
+      {
+        "field": "documentDate",
+        "value": "2026-10-06",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Mateo Alvarado",
+        "page": 1
+      },
+      {
+        "field": "dateOfBirth",
+        "value": "2001-08-08",
+        "page": 1
+      },
+      {
+        "field": "incidentDate",
+        "value": "2026-08-22",
+        "page": 1
+      }
+    ]
+  }
+]

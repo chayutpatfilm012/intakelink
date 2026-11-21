@@ -1,0 +1,15 @@
+Bayview Orthopedics
+(fictional organization; synthetic test document)
+
+STATEMENT OF CHARGES
+Date: 07/20/2026
+
+Patient: Whitfield, Dana
+DOB: 03/12/1984
+Claim No.: CLM-55821
+Itemized charges
+  99204  New patient visit, moderate complexity      $196.00
+  72040  X-ray, cervical spine, 2-3 views            $199.00
+  97110  Therapeutic exercise, 15 min (x4)           $168.00
+Total due: $563.00
+Remit to the billing office within 30 days of this statement.

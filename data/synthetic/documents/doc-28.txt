@@ -1,0 +1,14 @@
+Riverside Chiropractic
+(fictional organization; synthetic test document)
+
+OFFICE VISIT NOTE
+Date: 03/25/2026
+
+Patient Name: Solberg, Ingrid
+Date of Birth: 10/15/1983
+Date of Injury: 03/02/2026
+Subjective: Patient reports neck and lower back pain since the collision.
+Objective: Reduced cervical range of motion; paraspinal tenderness L3-L5.
+Assessment: Cervical strain; lumbar sprain.
+Plan: Physical therapy 2x/week for 6 weeks; follow up in 4 weeks.
+Electronically signed by the treating provider.

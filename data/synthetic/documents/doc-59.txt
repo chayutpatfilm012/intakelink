@@ -1,0 +1,17 @@
+Bayview Orthopedics
+(fictional organization; synthetic test document)
+
+OFFICE VISIT NOTE
+Date: 08/06/2026
+
+Patient Name: Whitfield, Dana
+Date of Birth: 03/12/1984
+Claim #: CLM-55821
+Subjective: Patient reports neck and lower back pain since the collision.
+Objective: Reduced cervical range of motion; paraspinal tenderness L3-L5.
+Assessment: Cervical strain; lumbar sprain.
+
+--- page from another chart, scanned with this record ---
+Patient Name: Bell, Marcus
+Plan: Physical therapy 2x/week for 6 weeks; follow up in 4 weeks.
+Electronically signed by the treating provider.

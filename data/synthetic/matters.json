@@ -1,0 +1,387 @@
+[
+  {
+    "matter_id": "M-1042",
+    "client_name": "Dana Whitfield",
+    "date_of_birth": "1984-03-12",
+    "claim_numbers": [
+      "CLM-55821"
+    ],
+    "incident_date": "2026-06-14",
+    "responsible_attorney": "a.reyes",
+    "assigned_staff": [
+      "p.lee",
+      "s.ortiz"
+    ],
+    "insurers": [
+      "Harborline Mutual"
+    ],
+    "providers": [
+      "Bayview Orthopedics"
+    ]
+  },
+  {
+    "matter_id": "M-2077",
+    "client_name": "Marcus Bell",
+    "date_of_birth": "1979-11-02",
+    "claim_numbers": [
+      "CLM-60310"
+    ],
+    "incident_date": "2026-05-02",
+    "responsible_attorney": "a.khan",
+    "assigned_staff": [
+      "p.lee"
+    ],
+    "insurers": [
+      "Keystone Casualty"
+    ],
+    "providers": [
+      "Northgate Imaging"
+    ]
+  },
+  {
+    "matter_id": "M-1105",
+    "client_name": "Priya Raman",
+    "date_of_birth": "1991-07-23",
+    "claim_numbers": [
+      "CLM-61477"
+    ],
+    "incident_date": "2026-02-09",
+    "responsible_attorney": "a.reyes",
+    "assigned_staff": [
+      "s.ortiz",
+      "p.garcia"
+    ],
+    "insurers": [
+      "Harborline Mutual"
+    ],
+    "providers": [
+      "Lakeside Physical Therapy"
+    ]
+  },
+  {
+    "matter_id": "M-1130",
+    "client_name": "Tobias Fenwick",
+    "date_of_birth": "1968-01-30",
+    "claim_numbers": [
+      "CLM-58802",
+      "CLM-58803"
+    ],
+    "incident_date": "2026-03-21",
+    "responsible_attorney": "a.novak",
+    "assigned_staff": [
+      "p.garcia"
+    ],
+    "insurers": [
+      "Cedar Ridge Insurance"
+    ],
+    "providers": [
+      "St. Alder Medical Center"
+    ]
+  },
+  {
+    "matter_id": "M-1187",
+    "client_name": "Lucia Ferreira",
+    "date_of_birth": "1995-12-05",
+    "claim_numbers": [
+      "CLM-62019"
+    ],
+    "incident_date": "2026-04-17",
+    "responsible_attorney": "a.mensah",
+    "assigned_staff": [
+      "s.baker"
+    ],
+    "insurers": [
+      "Keystone Casualty"
+    ],
+    "providers": [
+      "Bayview Orthopedics"
+    ]
+  },
+  {
+    "matter_id": "M-1203",
+    "client_name": "Gideon Achterberg",
+    "date_of_birth": "1957-09-14",
+    "claim_numbers": [
+      "CLM-59934"
+    ],
+    "incident_date": "2025-11-28",
+    "responsible_attorney": "a.khan",
+    "assigned_staff": [
+      "p.lee",
+      "s.baker"
+    ],
+    "insurers": [
+      "Pinecrest Assurance"
+    ],
+    "providers": [
+      "Northgate Imaging"
+    ]
+  },
+  {
+    "matter_id": "M-1219",
+    "client_name": "Hana Kobayashi",
+    "date_of_birth": "1988-04-02",
+    "claim_numbers": [
+      "CLM-63155"
+    ],
+    "incident_date": "2026-01-11",
+    "responsible_attorney": "a.novak",
+    "assigned_staff": [
+      "p.garcia"
+    ],
+    "insurers": [
+      "Harborline Mutual"
+    ],
+    "providers": [
+      "Riverside Chiropractic"
+    ]
+  },
+  {
+    "matter_id": "M-1244",
+    "client_name": "Desmond Okafor",
+    "date_of_birth": "1975-06-19",
+    "claim_numbers": [
+      "CLM-60772"
+    ],
+    "incident_date": "2026-07-03",
+    "responsible_attorney": "a.mensah",
+    "assigned_staff": [
+      "s.ortiz"
+    ],
+    "insurers": [
+      "Cedar Ridge Insurance"
+    ],
+    "providers": [
+      "St. Alder Medical Center"
+    ]
+  },
+  {
+    "matter_id": "M-1258",
+    "client_name": "Rosalind Grey",
+    "date_of_birth": "1949-02-27",
+    "claim_numbers": [
+      "CLM-57340"
+    ],
+    "incident_date": "2025-10-06",
+    "responsible_attorney": "a.reyes",
+    "assigned_staff": [
+      "p.lee"
+    ],
+    "insurers": [
+      "Pinecrest Assurance"
+    ],
+    "providers": [
+      "Meadowbrook Rehabilitation"
+    ]
+  },
+  {
+    "matter_id": "M-1276",
+    "client_name": "Mateo Alvarado",
+    "date_of_birth": "2001-08-08",
+    "claim_numbers": [
+      "CLM-64001"
+    ],
+    "incident_date": "2026-08-22",
+    "responsible_attorney": "a.khan",
+    "assigned_staff": [
+      "s.baker"
+    ],
+    "insurers": [
+      "Keystone Casualty"
+    ],
+    "providers": [
+      "Lakeside Physical Therapy"
+    ]
+  },
+  {
+    "matter_id": "M-1290",
+    "client_name": "Ingrid Solberg",
+    "date_of_birth": "1983-10-15",
+    "claim_numbers": [
+      "CLM-61820"
+    ],
+    "incident_date": "2026-03-02",
+    "responsible_attorney": "a.novak",
+    "assigned_staff": [
+      "p.garcia",
+      "s.ortiz"
+    ],
+    "insurers": [
+      "Summit Fidelity"
+    ],
+    "providers": [
+      "Riverside Chiropractic"
+    ]
+  },
+  {
+    "matter_id": "M-1312",
+    "client_name": "Yusuf Haddad",
+    "date_of_birth": "1970-05-09",
+    "claim_numbers": [
+      "CLM-62588"
+    ],
+    "incident_date": "2026-05-27",
+    "responsible_attorney": "a.mensah",
+    "assigned_staff": [
+      "s.baker"
+    ],
+    "insurers": [
+      "Summit Fidelity"
+    ],
+    "providers": [
+      "Northgate Imaging"
+    ]
+  },
+  {
+    "matter_id": "M-1335",
+    "client_name": "Camille Duval",
+    "date_of_birth": "1993-03-31",
+    "claim_numbers": [
+      "CLM-63904"
+    ],
+    "incident_date": "2026-06-30",
+    "responsible_attorney": "a.reyes",
+    "assigned_staff": [
+      "s.ortiz"
+    ],
+    "insurers": [
+      "Harborline Mutual"
+    ],
+    "providers": [
+      "Meadowbrook Rehabilitation"
+    ]
+  },
+  {
+    "matter_id": "M-1351",
+    "client_name": "Arjun Mehta",
+    "date_of_birth": "1986-11-21",
+    "claim_numbers": [
+      "CLM-59210"
+    ],
+    "incident_date": "2025-12-19",
+    "responsible_attorney": "a.khan",
+    "assigned_staff": [
+      "p.lee"
+    ],
+    "insurers": [
+      "Cedar Ridge Insurance"
+    ],
+    "providers": [
+      "Bayview Orthopedics"
+    ]
+  },
+  {
+    "matter_id": "M-1368",
+    "client_name": "Maria Santos",
+    "date_of_birth": "1972-08-30",
+    "claim_numbers": [
+      "CLM-60045"
+    ],
+    "incident_date": "2026-02-14",
+    "responsible_attorney": "a.novak",
+    "assigned_staff": [
+      "p.garcia"
+    ],
+    "insurers": [
+      "Pinecrest Assurance"
+    ],
+    "providers": [
+      "St. Alder Medical Center"
+    ]
+  },
+  {
+    "matter_id": "M-1372",
+    "client_name": "Maria Santos",
+    "date_of_birth": "1998-01-07",
+    "claim_numbers": [
+      "CLM-64410"
+    ],
+    "incident_date": "2026-09-05",
+    "responsible_attorney": "a.mensah",
+    "assigned_staff": [
+      "s.baker"
+    ],
+    "insurers": [
+      "Summit Fidelity"
+    ],
+    "providers": [
+      "Lakeside Physical Therapy"
+    ]
+  },
+  {
+    "matter_id": "M-1389",
+    "client_name": "Elliot Marsh",
+    "date_of_birth": "1981-12-12",
+    "claim_numbers": [
+      "CLM-58115"
+    ],
+    "incident_date": "2025-09-19",
+    "responsible_attorney": "a.reyes",
+    "assigned_staff": [
+      "p.lee"
+    ],
+    "insurers": [
+      "Harborline Mutual"
+    ],
+    "providers": [
+      "Riverside Chiropractic"
+    ]
+  },
+  {
+    "matter_id": "M-1407",
+    "client_name": "Elliot Marsh",
+    "date_of_birth": "1981-12-12",
+    "claim_numbers": [
+      "CLM-63772"
+    ],
+    "incident_date": "2026-07-25",
+    "responsible_attorney": "a.reyes",
+    "assigned_staff": [
+      "p.lee"
+    ],
+    "insurers": [
+      "Harborline Mutual"
+    ],
+    "providers": [
+      "Bayview Orthopedics"
+    ]
+  },
+  {
+    "matter_id": "M-1421",
+    "client_name": "Noor Siddiqui",
+    "date_of_birth": "1999-02-03",
+    "claim_numbers": [
+      "CLM-62260"
+    ],
+    "incident_date": "2026-04-08",
+    "responsible_attorney": "a.khan",
+    "assigned_staff": [
+      "s.ortiz"
+    ],
+    "insurers": [
+      "Keystone Casualty"
+    ],
+    "providers": [
+      "Meadowbrook Rehabilitation"
+    ]
+  },
+  {
+    "matter_id": "M-1436",
+    "client_name": "Wendell Pryce",
+    "date_of_birth": "1965-07-07",
+    "claim_numbers": [
+      "CLM-61093"
+    ],
+    "incident_date": "2026-01-29",
+    "responsible_attorney": "a.mensah",
+    "assigned_staff": [
+      "p.garcia"
+    ],
+    "insurers": [
+      "Cedar Ridge Insurance"
+    ],
+    "providers": [
+      "Northgate Imaging"
+    ]
+  }
+]

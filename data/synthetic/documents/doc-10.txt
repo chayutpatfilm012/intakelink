@@ -1,0 +1,14 @@
+Cedar Ridge Insurance
+(fictional organization; synthetic test document)
+
+Claim correspondence
+Date: March 6, 2026
+
+Claim Number: CLM-61093
+Claimant: Wendell Pryce
+Date of Loss: January 29, 2026
+We have received the records submitted to date and are reviewing the
+claim. Please send any further medical bills and a wage-loss statement.
+Our current evaluation amount is $196.00.
+
+Sincerely,

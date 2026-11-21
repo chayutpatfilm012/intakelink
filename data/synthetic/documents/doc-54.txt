@@ -1,0 +1,14 @@
+Meadowbrook Rehabilitation
+(fictional organization; synthetic test document)
+
+OFFICE VISIT NOTE
+Date: 05/07/2026
+
+Patient Name: Siddiqui, Noor
+Date of Birth: 02/03/1999
+Date of Injury: 04/08/2026
+Subjective: Patient reports neck and lower back pain since the collision.
+Objective: Reduced cervical range of motion; paraspinal tenderness L3-L5.
+Assessment: Cervical strain; lumbar sprain.
+Plan: Physical therapy 2x/week for 6 weeks; follow up in 4 weeks.
+Electronically signed by the treating provider.

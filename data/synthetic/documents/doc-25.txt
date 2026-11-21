@@ -1,0 +1,15 @@
+Riverside Chiropractic
+(fictional organization; synthetic test document)
+
+STATEMENT OF CHARGES
+Date: 02/05/2026
+
+Patient: Kobayashi, Hana
+DOB: 04/02/1988
+Claim No.: CLM-63155
+Itemized charges
+  99204  New patient visit, moderate complexity      $265.00
+  72040  X-ray, cervical spine, 2-3 views            $158.00
+  97110  Therapeutic exercise, 15 min (x4)           $147.00
+Total due: $570.00
+Remit to the billing office within 30 days of this statement.
