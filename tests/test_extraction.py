@@ -104,6 +104,7 @@ def test_end_to_end_outcomes_match_the_manifest(pipeline):
         if e["cross_matter"]:
             want = "CROSS_MATTER_RISK" if e["cross_matter"]["tier"] == 2 else "CROSS_MATTER_NAME"
             assert FlagType[want] in types, key
+        assert (FlagType.FACT_CONFLICT in types) is bool(e["fact_conflict"]), key
 
 
 # --- LLM mode with a fake client (no network, no key) ----------------------------
