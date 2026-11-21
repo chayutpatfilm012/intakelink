@@ -1,0 +1,1358 @@
+[
+  {
+    "file": "held-01.txt",
+    "key": "H01",
+    "category": "standard",
+    "template": "eob",
+    "document_type": "insurer_letter",
+    "truth_matter": "M-1130",
+    "cross_matter": null,
+    "fact_conflict": null,
+    "facts": [
+      {
+        "field": "insurer",
+        "value": "Cedar Ridge Insurance",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "FENWICK, TOBIAS",
+        "page": 1
+      },
+      {
+        "field": "dateOfBirth",
+        "value": "1968.01.30",
+        "page": 1
+      },
+      {
+        "field": "claimNumber",
+        "value": "CLM-58802",
+        "page": 1
+      },
+      {
+        "field": "incidentDate",
+        "value": "03/21/2026",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "file": "held-02.txt",
+    "key": "H02",
+    "category": "standard",
+    "template": "discharge",
+    "document_type": "medical_record",
+    "truth_matter": "M-1290",
+    "cross_matter": null,
+    "fact_conflict": null,
+    "facts": [
+      {
+        "field": "provider",
+        "value": "Riverside Chiropractic",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Ingrid Solberg",
+        "page": 1
+      },
+      {
+        "field": "dateOfBirth",
+        "value": "10/15/83",
+        "page": 1
+      },
+      {
+        "field": "incidentDate",
+        "value": "March 2, 2026",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "file": "held-03.txt",
+    "key": "H03",
+    "category": "standard",
+    "template": "pharmacy",
+    "document_type": "medical_bill",
+    "truth_matter": "M-1407",
+    "cross_matter": null,
+    "fact_conflict": null,
+    "facts": [
+      {
+        "field": "clientName",
+        "value": "Elliot Marsh",
+        "page": 1
+      },
+      {
+        "field": "dateOfBirth",
+        "value": "12/12/1981",
+        "page": 1
+      },
+      {
+        "field": "claimNumber",
+        "value": "CLM-63772",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "file": "held-04.txt",
+    "key": "H04",
+    "category": "standard",
+    "template": "prose_letter",
+    "document_type": "correspondence",
+    "truth_matter": "M-1187",
+    "cross_matter": null,
+    "fact_conflict": null,
+    "facts": [
+      {
+        "field": "clientName",
+        "value": "Lucia Ferreira",
+        "page": 1
+      },
+      {
+        "field": "incidentDate",
+        "value": "April 17th, 2026",
+        "page": 1
+      },
+      {
+        "field": "claimNumber",
+        "value": "CLM 62019",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "file": "held-05.txt",
+    "key": "H05",
+    "category": "standard",
+    "template": "pt_note",
+    "document_type": "medical_record",
+    "truth_matter": "M-1312",
+    "cross_matter": null,
+    "fact_conflict": null,
+    "facts": [
+      {
+        "field": "provider",
+        "value": "Northgate Imaging",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Haddad, Yusuf",
+        "page": 1
+      },
+      {
+        "field": "dateOfBirth",
+        "value": "05/09/1970",
+        "page": 1
+      },
+      {
+        "field": "claimNumber",
+        "value": "CLM-62588",
+        "page": 1
+      },
+      {
+        "field": "incidentDate",
+        "value": "05/27/2026",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "file": "held-06.txt",
+    "key": "H06",
+    "category": "standard",
+    "template": "ocr_bill",
+    "document_type": "medical_bill",
+    "truth_matter": "M-1421",
+    "cross_matter": null,
+    "fact_conflict": null,
+    "facts": [
+      {
+        "field": "provider",
+        "value": "Meadowbr0ok Rehabi1itati0n",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Sidd1qui, No0r",
+        "page": 1
+      },
+      {
+        "field": "dateOfBirth",
+        "value": "02/03/1999",
+        "page": 1
+      },
+      {
+        "field": "claimNumber",
+        "value": "CLM-62260",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "file": "held-07.txt",
+    "key": "H07",
+    "category": "standard",
+    "template": "eob",
+    "document_type": "insurer_letter",
+    "truth_matter": "M-1203",
+    "cross_matter": null,
+    "fact_conflict": null,
+    "facts": [
+      {
+        "field": "insurer",
+        "value": "Pinecrest Assurance",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "ACHTERBERG, GIDEON",
+        "page": 1
+      },
+      {
+        "field": "dateOfBirth",
+        "value": "1957.09.14",
+        "page": 1
+      },
+      {
+        "field": "claimNumber",
+        "value": "CLM-59934",
+        "page": 1
+      },
+      {
+        "field": "incidentDate",
+        "value": "11/28/2025",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "file": "held-08.txt",
+    "key": "H08",
+    "category": "standard",
+    "template": "discharge",
+    "document_type": "medical_record",
+    "truth_matter": "M-1335",
+    "cross_matter": null,
+    "fact_conflict": null,
+    "facts": [
+      {
+        "field": "provider",
+        "value": "Meadowbrook Rehabilitation",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Camille Duval",
+        "page": 1
+      },
+      {
+        "field": "dateOfBirth",
+        "value": "03/31/93",
+        "page": 1
+      },
+      {
+        "field": "incidentDate",
+        "value": "June 30, 2026",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "file": "held-09.txt",
+    "key": "H09",
+    "category": "standard",
+    "template": "pharmacy",
+    "document_type": "medical_bill",
+    "truth_matter": "M-1436",
+    "cross_matter": null,
+    "fact_conflict": null,
+    "facts": [
+      {
+        "field": "clientName",
+        "value": "Wendell Pryce",
+        "page": 1
+      },
+      {
+        "field": "dateOfBirth",
+        "value": "7/7/1965",
+        "page": 1
+      },
+      {
+        "field": "claimNumber",
+        "value": "CLM-61093",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "file": "held-10.txt",
+    "key": "H10",
+    "category": "standard",
+    "template": "prose_letter",
+    "document_type": "correspondence",
+    "truth_matter": "M-1219",
+    "cross_matter": null,
+    "fact_conflict": null,
+    "facts": [
+      {
+        "field": "clientName",
+        "value": "Hana Kobayashi",
+        "page": 1
+      },
+      {
+        "field": "incidentDate",
+        "value": "January 11th, 2026",
+        "page": 1
+      },
+      {
+        "field": "claimNumber",
+        "value": "CLM 63155",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "file": "held-11.txt",
+    "key": "H11",
+    "category": "standard",
+    "template": "pt_note",
+    "document_type": "medical_record",
+    "truth_matter": "M-1351",
+    "cross_matter": null,
+    "fact_conflict": null,
+    "facts": [
+      {
+        "field": "provider",
+        "value": "Bayview Orthopedics",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Mehta, Arjun",
+        "page": 1
+      },
+      {
+        "field": "dateOfBirth",
+        "value": "11/21/1986",
+        "page": 1
+      },
+      {
+        "field": "claimNumber",
+        "value": "CLM-59210",
+        "page": 1
+      },
+      {
+        "field": "incidentDate",
+        "value": "12/19/2025",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "file": "held-12.txt",
+    "key": "H12",
+    "category": "standard",
+    "template": "ocr_bill",
+    "document_type": "medical_bill",
+    "truth_matter": "M-1042",
+    "cross_matter": null,
+    "fact_conflict": null,
+    "facts": [
+      {
+        "field": "provider",
+        "value": "Bayv1ew Orthoped1cs",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Whitf1eld, Dana",
+        "page": 1
+      },
+      {
+        "field": "dateOfBirth",
+        "value": "03/12/1984",
+        "page": 1
+      },
+      {
+        "field": "claimNumber",
+        "value": "CLM-55821",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "file": "held-13.txt",
+    "key": "H13",
+    "category": "standard",
+    "template": "eob",
+    "document_type": "insurer_letter",
+    "truth_matter": "M-1244",
+    "cross_matter": null,
+    "fact_conflict": null,
+    "facts": [
+      {
+        "field": "insurer",
+        "value": "Cedar Ridge Insurance",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "OKAFOR, DESMOND",
+        "page": 1
+      },
+      {
+        "field": "dateOfBirth",
+        "value": "1975.06.19",
+        "page": 1
+      },
+      {
+        "field": "claimNumber",
+        "value": "CLM-60772",
+        "page": 1
+      },
+      {
+        "field": "incidentDate",
+        "value": "07/03/2026",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "file": "held-14.txt",
+    "key": "H14",
+    "category": "standard",
+    "template": "discharge",
+    "document_type": "medical_record",
+    "truth_matter": "M-1368",
+    "cross_matter": null,
+    "fact_conflict": null,
+    "facts": [
+      {
+        "field": "provider",
+        "value": "St. Alder Medical Center",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Maria Santos",
+        "page": 1
+      },
+      {
+        "field": "dateOfBirth",
+        "value": "08/30/72",
+        "page": 1
+      },
+      {
+        "field": "incidentDate",
+        "value": "February 14, 2026",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "file": "held-15.txt",
+    "key": "H15",
+    "category": "standard",
+    "template": "pharmacy",
+    "document_type": "medical_bill",
+    "truth_matter": "M-2077",
+    "cross_matter": null,
+    "fact_conflict": null,
+    "facts": [
+      {
+        "field": "clientName",
+        "value": "Marcus Bell",
+        "page": 1
+      },
+      {
+        "field": "dateOfBirth",
+        "value": "11/2/1979",
+        "page": 1
+      },
+      {
+        "field": "claimNumber",
+        "value": "CLM-60310",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "file": "held-16.txt",
+    "key": "H16",
+    "category": "standard",
+    "template": "prose_letter",
+    "document_type": "correspondence",
+    "truth_matter": "M-1258",
+    "cross_matter": null,
+    "fact_conflict": null,
+    "facts": [
+      {
+        "field": "clientName",
+        "value": "Rosalind Grey",
+        "page": 1
+      },
+      {
+        "field": "incidentDate",
+        "value": "October 6th, 2025",
+        "page": 1
+      },
+      {
+        "field": "claimNumber",
+        "value": "CLM 57340",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "file": "held-17.txt",
+    "key": "H17",
+    "category": "standard",
+    "template": "pt_note",
+    "document_type": "medical_record",
+    "truth_matter": "M-1372",
+    "cross_matter": null,
+    "fact_conflict": null,
+    "facts": [
+      {
+        "field": "provider",
+        "value": "Lakeside Physical Therapy",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Santos, Maria",
+        "page": 1
+      },
+      {
+        "field": "dateOfBirth",
+        "value": "01/07/1998",
+        "page": 1
+      },
+      {
+        "field": "claimNumber",
+        "value": "CLM-64410",
+        "page": 1
+      },
+      {
+        "field": "incidentDate",
+        "value": "09/05/2026",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "file": "held-18.txt",
+    "key": "H18",
+    "category": "standard",
+    "template": "ocr_bill",
+    "document_type": "medical_bill",
+    "truth_matter": "M-1105",
+    "cross_matter": null,
+    "fact_conflict": null,
+    "facts": [
+      {
+        "field": "provider",
+        "value": "Lakeside Physica1 Therapy",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Raman, Priya",
+        "page": 1
+      },
+      {
+        "field": "dateOfBirth",
+        "value": "07/23/1991",
+        "page": 1
+      },
+      {
+        "field": "claimNumber",
+        "value": "CLM-61477",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "file": "held-19.txt",
+    "key": "H19",
+    "category": "standard",
+    "template": "eob",
+    "document_type": "insurer_letter",
+    "truth_matter": "M-1276",
+    "cross_matter": null,
+    "fact_conflict": null,
+    "facts": [
+      {
+        "field": "insurer",
+        "value": "Keystone Casualty",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "ALVARADO, MATEO",
+        "page": 1
+      },
+      {
+        "field": "dateOfBirth",
+        "value": "2001.08.08",
+        "page": 1
+      },
+      {
+        "field": "claimNumber",
+        "value": "CLM-64001",
+        "page": 1
+      },
+      {
+        "field": "incidentDate",
+        "value": "08/22/2026",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "file": "held-20.txt",
+    "key": "H20",
+    "category": "standard",
+    "template": "discharge",
+    "document_type": "medical_record",
+    "truth_matter": "M-1389",
+    "cross_matter": null,
+    "fact_conflict": null,
+    "facts": [
+      {
+        "field": "provider",
+        "value": "Riverside Chiropractic",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Elliot Marsh",
+        "page": 1
+      },
+      {
+        "field": "dateOfBirth",
+        "value": "12/12/81",
+        "page": 1
+      },
+      {
+        "field": "incidentDate",
+        "value": "September 19, 2025",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "file": "held-21.txt",
+    "key": "H21",
+    "category": "standard",
+    "template": "pharmacy",
+    "document_type": "medical_bill",
+    "truth_matter": "M-1130",
+    "cross_matter": null,
+    "fact_conflict": null,
+    "facts": [
+      {
+        "field": "clientName",
+        "value": "Tobias Fenwick",
+        "page": 1
+      },
+      {
+        "field": "dateOfBirth",
+        "value": "1/30/1968",
+        "page": 1
+      },
+      {
+        "field": "claimNumber",
+        "value": "CLM-58802",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "file": "held-22.txt",
+    "key": "H22",
+    "category": "standard",
+    "template": "prose_letter",
+    "document_type": "correspondence",
+    "truth_matter": "M-1290",
+    "cross_matter": null,
+    "fact_conflict": null,
+    "facts": [
+      {
+        "field": "clientName",
+        "value": "Ingrid Solberg",
+        "page": 1
+      },
+      {
+        "field": "incidentDate",
+        "value": "March 2nd, 2026",
+        "page": 1
+      },
+      {
+        "field": "claimNumber",
+        "value": "CLM 61820",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "file": "held-23.txt",
+    "key": "H23",
+    "category": "standard",
+    "template": "pt_note",
+    "document_type": "medical_record",
+    "truth_matter": "M-1407",
+    "cross_matter": null,
+    "fact_conflict": null,
+    "facts": [
+      {
+        "field": "provider",
+        "value": "Bayview Orthopedics",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Marsh, Elliot",
+        "page": 1
+      },
+      {
+        "field": "dateOfBirth",
+        "value": "12/12/1981",
+        "page": 1
+      },
+      {
+        "field": "claimNumber",
+        "value": "CLM-63772",
+        "page": 1
+      },
+      {
+        "field": "incidentDate",
+        "value": "07/25/2026",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "file": "held-24.txt",
+    "key": "H24",
+    "category": "standard",
+    "template": "ocr_bill",
+    "document_type": "medical_bill",
+    "truth_matter": "M-1187",
+    "cross_matter": null,
+    "fact_conflict": null,
+    "facts": [
+      {
+        "field": "provider",
+        "value": "Bayview Orth0pedics",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Ferreira, Luc1a",
+        "page": 1
+      },
+      {
+        "field": "dateOfBirth",
+        "value": "12/05/1995",
+        "page": 1
+      },
+      {
+        "field": "claimNumber",
+        "value": "CLM-62019",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "file": "held-25.txt",
+    "key": "H25",
+    "category": "standard",
+    "template": "eob",
+    "document_type": "insurer_letter",
+    "truth_matter": "M-1312",
+    "cross_matter": null,
+    "fact_conflict": null,
+    "facts": [
+      {
+        "field": "insurer",
+        "value": "Summit Fidelity",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "HADDAD, YUSUF",
+        "page": 1
+      },
+      {
+        "field": "dateOfBirth",
+        "value": "1970.05.09",
+        "page": 1
+      },
+      {
+        "field": "claimNumber",
+        "value": "CLM-62588",
+        "page": 1
+      },
+      {
+        "field": "incidentDate",
+        "value": "05/27/2026",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "file": "held-26.txt",
+    "key": "H26",
+    "category": "standard",
+    "template": "discharge",
+    "document_type": "medical_record",
+    "truth_matter": "M-1421",
+    "cross_matter": null,
+    "fact_conflict": null,
+    "facts": [
+      {
+        "field": "provider",
+        "value": "Meadowbrook Rehabilitation",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Noor Siddiqui",
+        "page": 1
+      },
+      {
+        "field": "dateOfBirth",
+        "value": "02/03/99",
+        "page": 1
+      },
+      {
+        "field": "incidentDate",
+        "value": "April 8, 2026",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "file": "held-27.txt",
+    "key": "H27",
+    "category": "standard",
+    "template": "pharmacy",
+    "document_type": "medical_bill",
+    "truth_matter": "M-1203",
+    "cross_matter": null,
+    "fact_conflict": null,
+    "facts": [
+      {
+        "field": "clientName",
+        "value": "Gideon Achterberg",
+        "page": 1
+      },
+      {
+        "field": "dateOfBirth",
+        "value": "9/14/1957",
+        "page": 1
+      },
+      {
+        "field": "claimNumber",
+        "value": "CLM-59934",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "file": "held-28.txt",
+    "key": "H28",
+    "category": "standard",
+    "template": "prose_letter",
+    "document_type": "correspondence",
+    "truth_matter": "M-1335",
+    "cross_matter": null,
+    "fact_conflict": null,
+    "facts": [
+      {
+        "field": "clientName",
+        "value": "Camille Duval",
+        "page": 1
+      },
+      {
+        "field": "incidentDate",
+        "value": "June 30th, 2026",
+        "page": 1
+      },
+      {
+        "field": "claimNumber",
+        "value": "CLM 63904",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "file": "held-29.txt",
+    "key": "H29",
+    "category": "standard",
+    "template": "pt_note",
+    "document_type": "medical_record",
+    "truth_matter": "M-1436",
+    "cross_matter": null,
+    "fact_conflict": null,
+    "facts": [
+      {
+        "field": "provider",
+        "value": "Northgate Imaging",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Pryce, Wendell",
+        "page": 1
+      },
+      {
+        "field": "dateOfBirth",
+        "value": "07/07/1965",
+        "page": 1
+      },
+      {
+        "field": "claimNumber",
+        "value": "CLM-61093",
+        "page": 1
+      },
+      {
+        "field": "incidentDate",
+        "value": "01/29/2026",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "file": "held-30.txt",
+    "key": "H30",
+    "category": "standard",
+    "template": "ocr_bill",
+    "document_type": "medical_bill",
+    "truth_matter": "M-1219",
+    "cross_matter": null,
+    "fact_conflict": null,
+    "facts": [
+      {
+        "field": "provider",
+        "value": "R1verside Chir0practic",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "K0bayashi, Hana",
+        "page": 1
+      },
+      {
+        "field": "dateOfBirth",
+        "value": "04/02/1988",
+        "page": 1
+      },
+      {
+        "field": "claimNumber",
+        "value": "CLM-63155",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "file": "held-31.txt",
+    "key": "HX1",
+    "category": "cross_matter_tier1",
+    "template": "discharge",
+    "document_type": "medical_record",
+    "truth_matter": "M-1042",
+    "cross_matter": {
+      "matter": "M-1258",
+      "tier": 1,
+      "page": 2
+    },
+    "fact_conflict": null,
+    "facts": [
+      {
+        "field": "provider",
+        "value": "Bayview Orthopedics",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Dana Whitfield",
+        "page": 1
+      },
+      {
+        "field": "dateOfBirth",
+        "value": "03/12/84",
+        "page": 1
+      },
+      {
+        "field": "incidentDate",
+        "value": "June 14, 2026",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Rosalind Grey",
+        "page": 2
+      }
+    ]
+  },
+  {
+    "file": "held-32.txt",
+    "key": "HX2",
+    "category": "cross_matter_tier1",
+    "template": "pharmacy",
+    "document_type": "medical_bill",
+    "truth_matter": "M-1219",
+    "cross_matter": {
+      "matter": "M-1436",
+      "tier": 1,
+      "page": 2
+    },
+    "fact_conflict": null,
+    "facts": [
+      {
+        "field": "clientName",
+        "value": "Hana Kobayashi",
+        "page": 1
+      },
+      {
+        "field": "dateOfBirth",
+        "value": "4/2/1988",
+        "page": 1
+      },
+      {
+        "field": "claimNumber",
+        "value": "CLM-63155",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Wendell Pryce",
+        "page": 2
+      }
+    ]
+  },
+  {
+    "file": "held-33.txt",
+    "key": "HX3",
+    "category": "cross_matter_tier1",
+    "template": "prose_letter",
+    "document_type": "correspondence",
+    "truth_matter": "M-1335",
+    "cross_matter": {
+      "matter": "M-2077",
+      "tier": 1,
+      "page": 2
+    },
+    "fact_conflict": null,
+    "facts": [
+      {
+        "field": "clientName",
+        "value": "Camille Duval",
+        "page": 1
+      },
+      {
+        "field": "incidentDate",
+        "value": "June 30th, 2026",
+        "page": 1
+      },
+      {
+        "field": "claimNumber",
+        "value": "CLM 63904",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Marcus Bell",
+        "page": 2
+      }
+    ]
+  },
+  {
+    "file": "held-34.txt",
+    "key": "HX4",
+    "category": "cross_matter_tier2",
+    "template": "pt_note",
+    "document_type": "medical_record",
+    "truth_matter": "M-1105",
+    "cross_matter": {
+      "matter": "M-1351",
+      "tier": 2,
+      "page": 2
+    },
+    "fact_conflict": null,
+    "facts": [
+      {
+        "field": "provider",
+        "value": "Lakeside Physical Therapy",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Raman, Priya",
+        "page": 1
+      },
+      {
+        "field": "dateOfBirth",
+        "value": "07/23/1991",
+        "page": 1
+      },
+      {
+        "field": "claimNumber",
+        "value": "CLM-61477",
+        "page": 1
+      },
+      {
+        "field": "incidentDate",
+        "value": "02/09/2026",
+        "page": 1
+      },
+      {
+        "field": "claimNumber",
+        "value": "CLM-59210",
+        "page": 2
+      }
+    ]
+  },
+  {
+    "file": "held-35.txt",
+    "key": "HX5",
+    "category": "cross_matter_tier2",
+    "template": "ocr_bill",
+    "document_type": "medical_bill",
+    "truth_matter": "M-1290",
+    "cross_matter": {
+      "matter": "M-1187",
+      "tier": 2,
+      "page": 2
+    },
+    "fact_conflict": null,
+    "facts": [
+      {
+        "field": "provider",
+        "value": "R1verside Chir0practic",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "S0lberg, Ingrid",
+        "page": 1
+      },
+      {
+        "field": "dateOfBirth",
+        "value": "10/15/1983",
+        "page": 1
+      },
+      {
+        "field": "claimNumber",
+        "value": "CLM-61820",
+        "page": 1
+      },
+      {
+        "field": "claimNumber",
+        "value": "CLM-62019",
+        "page": 2
+      }
+    ]
+  },
+  {
+    "file": "held-36.txt",
+    "key": "HX6",
+    "category": "cross_matter_tier2",
+    "template": "eob",
+    "document_type": "insurer_letter",
+    "truth_matter": "M-1421",
+    "cross_matter": {
+      "matter": "M-1203",
+      "tier": 2,
+      "page": 2
+    },
+    "fact_conflict": null,
+    "facts": [
+      {
+        "field": "insurer",
+        "value": "Keystone Casualty",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "SIDDIQUI, NOOR",
+        "page": 1
+      },
+      {
+        "field": "dateOfBirth",
+        "value": "1999.02.03",
+        "page": 1
+      },
+      {
+        "field": "claimNumber",
+        "value": "CLM-62260",
+        "page": 1
+      },
+      {
+        "field": "incidentDate",
+        "value": "04/08/2026",
+        "page": 1
+      },
+      {
+        "field": "claimNumber",
+        "value": "CLM-59934",
+        "page": 2
+      }
+    ]
+  },
+  {
+    "file": "held-37.txt",
+    "key": "HF1",
+    "category": "fact_conflict",
+    "template": "eob",
+    "document_type": "insurer_letter",
+    "truth_matter": "M-1276",
+    "cross_matter": null,
+    "fact_conflict": {
+      "field": "dateOfBirth",
+      "page": 1
+    },
+    "facts": [
+      {
+        "field": "insurer",
+        "value": "Keystone Casualty",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "ALVARADO, MATEO",
+        "page": 1
+      },
+      {
+        "field": "dateOfBirth",
+        "value": "2001.08.18",
+        "page": 1
+      },
+      {
+        "field": "claimNumber",
+        "value": "CLM-64001",
+        "page": 1
+      },
+      {
+        "field": "incidentDate",
+        "value": "08/22/2026",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "file": "held-38.txt",
+    "key": "HF2",
+    "category": "fact_conflict",
+    "template": "pt_note",
+    "document_type": "medical_record",
+    "truth_matter": "M-1312",
+    "cross_matter": null,
+    "fact_conflict": {
+      "field": "dateOfBirth",
+      "page": 1
+    },
+    "facts": [
+      {
+        "field": "provider",
+        "value": "Northgate Imaging",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Haddad, Yusuf",
+        "page": 1
+      },
+      {
+        "field": "dateOfBirth",
+        "value": "05/19/1970",
+        "page": 1
+      },
+      {
+        "field": "claimNumber",
+        "value": "CLM-62588",
+        "page": 1
+      },
+      {
+        "field": "incidentDate",
+        "value": "05/27/2026",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "file": "held-39.txt",
+    "key": "HF3",
+    "category": "fact_conflict",
+    "template": "discharge",
+    "document_type": "medical_record",
+    "truth_matter": "M-1130",
+    "cross_matter": null,
+    "fact_conflict": {
+      "field": "dateOfBirth",
+      "page": 1
+    },
+    "facts": [
+      {
+        "field": "provider",
+        "value": "St. Alder Medical Center",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Tobias Fenwick",
+        "page": 1
+      },
+      {
+        "field": "dateOfBirth",
+        "value": "01/20/68",
+        "page": 1
+      },
+      {
+        "field": "incidentDate",
+        "value": "March 21, 2026",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "file": "held-40.txt",
+    "key": "HF4",
+    "category": "fact_conflict",
+    "template": "ocr_bill",
+    "document_type": "medical_bill",
+    "truth_matter": "M-1421",
+    "cross_matter": null,
+    "fact_conflict": {
+      "field": "dateOfBirth",
+      "page": 1
+    },
+    "facts": [
+      {
+        "field": "provider",
+        "value": "Mead0wbrook Rehab1litat1on",
+        "page": 1
+      },
+      {
+        "field": "clientName",
+        "value": "Siddiqu1, Noor",
+        "page": 1
+      },
+      {
+        "field": "dateOfBirth",
+        "value": "02/13/1999",
+        "page": 1
+      },
+      {
+        "field": "claimNumber",
+        "value": "CLM-62260",
+        "page": 1
+      }
+    ]
+  }
+]

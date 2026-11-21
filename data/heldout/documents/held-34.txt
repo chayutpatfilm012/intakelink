@@ -1,0 +1,9 @@
+Lakeside Physical Therapy
+Physical Therapy Progress Report (synthetic)
+
+Patient: Raman, Priya
+D.O.B.: 07/23/1991
+Claim #: CLM-61477
+DOI: 02/09/2026
+Visits to date: 8 of 12. Cervical rotation improved 20 degrees.
+Payment also applied to claim CLM-59210 (see attached).

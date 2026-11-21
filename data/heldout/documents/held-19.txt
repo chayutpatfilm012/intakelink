@@ -1,0 +1,9 @@
+Keystone Casualty - EXPLANATION OF BENEFITS
+This is not a bill. (fictional insurer; synthetic test document)
+
+Member: ALVARADO, MATEO
+Birthdate: 2001.08.08
+Claim Ref: CLM-64001
+Loss Date - 08/22/2026
+Service      Billed     Allowed    You owe
+97110        $160.00    $118.40    $0.00

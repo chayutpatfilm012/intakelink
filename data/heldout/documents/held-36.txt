@@ -1,0 +1,10 @@
+Keystone Casualty - EXPLANATION OF BENEFITS
+This is not a bill. (fictional insurer; synthetic test document)
+
+Member: SIDDIQUI, NOOR
+Birthdate: 1999.02.03
+Claim Ref: CLM-62260
+Loss Date - 04/08/2026
+Service      Billed     Allowed    You owe
+97110        $160.00    $118.40    $0.00
+Payment also applied to claim CLM-59934 (see attached).

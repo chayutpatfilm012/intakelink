@@ -1,0 +1,9 @@
+Summit Fidelity - EXPLANATION OF BENEFITS
+This is not a bill. (fictional insurer; synthetic test document)
+
+Member: HADDAD, YUSUF
+Birthdate: 1970.05.09
+Claim Ref: CLM-62588
+Loss Date - 05/27/2026
+Service      Billed     Allowed    You owe
+97110        $160.00    $118.40    $0.00

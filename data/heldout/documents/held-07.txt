@@ -1,0 +1,9 @@
+Pinecrest Assurance - EXPLANATION OF BENEFITS
+This is not a bill. (fictional insurer; synthetic test document)
+
+Member: ACHTERBERG, GIDEON
+Birthdate: 1957.09.14
+Claim Ref: CLM-59934
+Loss Date - 11/28/2025
+Service      Billed     Allowed    You owe
+97110        $160.00    $118.40    $0.00

@@ -1,0 +1,11 @@
+Bayview Orthopedics
+EMERGENCY DEPARTMENT DISCHARGE SUMMARY (synthetic)
+
+PATIENT NAME
+Dana Whitfield
+DATE OF BIRTH
+03/12/84
+DATE OF VISIT / INJURY
+June 14, 2026
+Discharge instructions: rest, ice, ibuprofen as directed. Return if symptoms worsen.
+Visitor log: Rosalind Grey

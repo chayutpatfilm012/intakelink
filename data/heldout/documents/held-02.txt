@@ -1,0 +1,10 @@
+Riverside Chiropractic
+EMERGENCY DEPARTMENT DISCHARGE SUMMARY (synthetic)
+
+PATIENT NAME
+Ingrid Solberg
+DATE OF BIRTH
+10/15/83
+DATE OF VISIT / INJURY
+March 2, 2026
+Discharge instructions: rest, ice, ibuprofen as directed. Return if symptoms worsen.

@@ -1,0 +1,10 @@
+Meadowbrook Rehabilitation
+EMERGENCY DEPARTMENT DISCHARGE SUMMARY (synthetic)
+
+PATIENT NAME
+Camille Duval
+DATE OF BIRTH
+03/31/93
+DATE OF VISIT / INJURY
+June 30, 2026
+Discharge instructions: rest, ice, ibuprofen as directed. Return if symptoms worsen.

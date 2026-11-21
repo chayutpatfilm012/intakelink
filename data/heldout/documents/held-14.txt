@@ -1,0 +1,10 @@
+St. Alder Medical Center
+EMERGENCY DEPARTMENT DISCHARGE SUMMARY (synthetic)
+
+PATIENT NAME
+Maria Santos
+DATE OF BIRTH
+08/30/72
+DATE OF VISIT / INJURY
+February 14, 2026
+Discharge instructions: rest, ice, ibuprofen as directed. Return if symptoms worsen.

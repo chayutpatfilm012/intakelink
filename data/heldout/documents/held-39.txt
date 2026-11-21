@@ -1,0 +1,10 @@
+St. Alder Medical Center
+EMERGENCY DEPARTMENT DISCHARGE SUMMARY (synthetic)
+
+PATIENT NAME
+Tobias Fenwick
+DATE OF BIRTH
+01/20/68
+DATE OF VISIT / INJURY
+March 21, 2026
+Discharge instructions: rest, ice, ibuprofen as directed. Return if symptoms worsen.

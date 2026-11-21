@@ -1,0 +1,10 @@
+Riverside Chiropractic
+EMERGENCY DEPARTMENT DISCHARGE SUMMARY (synthetic)
+
+PATIENT NAME
+Elliot Marsh
+DATE OF BIRTH
+12/12/81
+DATE OF VISIT / INJURY
+September 19, 2025
+Discharge instructions: rest, ice, ibuprofen as directed. Return if symptoms worsen.

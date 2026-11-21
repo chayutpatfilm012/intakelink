@@ -1,0 +1,9 @@
+Cedar Ridge Insurance - EXPLANATION OF BENEFITS
+This is not a bill. (fictional insurer; synthetic test document)
+
+Member: FENWICK, TOBIAS
+Birthdate: 1968.01.30
+Claim Ref: CLM-58802
+Loss Date - 03/21/2026
+Service      Billed     Allowed    You owe
+97110        $160.00    $118.40    $0.00

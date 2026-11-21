@@ -1,0 +1,10 @@
+Meadowbrook Rehabilitation
+EMERGENCY DEPARTMENT DISCHARGE SUMMARY (synthetic)
+
+PATIENT NAME
+Noor Siddiqui
+DATE OF BIRTH
+02/03/99
+DATE OF VISIT / INJURY
+April 8, 2026
+Discharge instructions: rest, ice, ibuprofen as directed. Return if symptoms worsen.

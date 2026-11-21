@@ -1,0 +1,9 @@
+Cedar Ridge Insurance - EXPLANATION OF BENEFITS
+This is not a bill. (fictional insurer; synthetic test document)
+
+Member: OKAFOR, DESMOND
+Birthdate: 1975.06.19
+Claim Ref: CLM-60772
+Loss Date - 07/03/2026
+Service      Billed     Allowed    You owe
+97110        $160.00    $118.40    $0.00
