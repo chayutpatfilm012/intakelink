@@ -39,6 +39,16 @@ def is_responsible_attorney(actor: Actor, matter: Optional[Matter]) -> bool:
             and actor.user_id == matter.responsible_attorney)
 
 
+def can_handle_intake(actor: Actor) -> bool:
+    """Intake queue: records with no matter yet (low confidence, unreadable).
+
+    Such a record may hold any client's data, so only senior paralegals (the
+    intake owners) may open or act on it. They may assign it to any matter with
+    a reason; from then on only that matter's team has access.
+    """
+    return actor.role == Role.SENIOR_PARALEGAL
+
+
 def can_handle_escalation(actor: Actor, matter: Optional[Matter]) -> bool:
     """Escalation owner: the matter's attorney or a senior paralegal on it (§7.5)."""
     if not is_on_matter(actor, matter):

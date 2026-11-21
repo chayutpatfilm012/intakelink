@@ -7,14 +7,16 @@ Design rules enforced here:
   * Review status changes only through an attributed reviewer action (FR-06).
   * The system may set hold status, never review status.
   * A tier-2 hold can be released only by the matter's responsible attorney.
+  * A record with no matter (intake queue) is worked only by intake staff
+    (senior paralegals), who may assign it to a matter with a reason.
   * Every refused request is written to the audit log.
 """
 from __future__ import annotations
 
 from typing import Any, Optional
 
-from .access import (MatterIndex, can_handle_escalation, is_on_matter,
-                     is_responsible_attorney)
+from .access import (MatterIndex, can_handle_escalation, can_handle_intake,
+                     is_on_matter, is_responsible_attorney)
 from .audit import AuditLog
 from .models import (Action, Actor, CandidateRecord, Decision, Flag, FlagType,
                      HoldStatus, Origin, ProcessingStatus, ReviewStatus, Role,
@@ -95,8 +97,12 @@ def _check(record: CandidateRecord, action: Action, actor: Actor,
 
     matter = index.get(record.target_matter_id())
 
-    # Access control (X1). A record with no matter yet is in the intake queue.
-    if matter is not None and not is_on_matter(actor, matter):
+    # Access control (X1). A record with no matter yet is in the intake queue,
+    # which only intake staff (senior paralegals) may work.
+    in_intake = matter is None
+    if in_intake and not can_handle_intake(actor):
+        _deny("NOT_AUTHORIZED", "only intake staff can act on a record with no matter")
+    if not in_intake and not is_on_matter(actor, matter):
         _deny("NOT_AUTHORIZED", "actor is not assigned to this matter")
 
     # Tier-2 hold: attorney-only, and only release_hold while it is active.
@@ -118,7 +124,7 @@ def _check(record: CandidateRecord, action: Action, actor: Actor,
     if status == ReviewStatus.ESCALATED:
         if action not in (Action.VALIDATE, Action.REJECT, Action.OVERRIDE_GUARD):
             _deny("INVALID_TRANSITION", f"cannot {action.value} an escalated record")
-        if not can_handle_escalation(actor, matter):
+        if not (can_handle_escalation(actor, matter) or in_intake):
             _deny("NOT_AUTHORIZED", "only the escalation owner can decide this record")
 
     if action == Action.VALIDATE:
@@ -144,7 +150,11 @@ def _check(record: CandidateRecord, action: Action, actor: Actor,
             target = index.get(new_matter)
             if target is None:
                 _deny("INVALID_TRANSITION", f"unknown matter {new_matter}")
-            if not is_on_matter(actor, target):
+            if in_intake:
+                # Intake staff route a record to any matter, with a reason.
+                if not (reason and reason.strip()):
+                    _deny("REASON_REQUIRED", "assigning a matter from the intake queue needs a reason")
+            elif not is_on_matter(actor, target):
                 _deny("NOT_AUTHORIZED", "actor is not assigned to the new matter")
             if record.has_open(FlagType.AMBIGUOUS_MATCH) and not (reason and reason.strip()):
                 _deny("REASON_REQUIRED", "name the evidence that decides an ambiguous match")
