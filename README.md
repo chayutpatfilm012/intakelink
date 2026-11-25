@@ -9,8 +9,11 @@ matter with the evidence behind every score, and a Cross-Matter Guard holds any
 document carrying another client's identifiers for the responsible attorney.
 A person approves every filing, and every action is logged.
 
-> **Status:** prototype. All 6 slices are built (see [Progress](#progress)).
-> The author-written FR-06 and FR-11 tests are still to come.
+**Try it online:** [https://intakelink-jbry7bvd7dauyhxn4admwd.streamlit.app/](https://intakelink-jbry7bvd7dauyhxn4admwd.streamlit.app/) (Workbench on Streamlit Community Cloud;
+pick a simulated user in the sidebar, then load the synthetic test set)
+
+> **Status:** prototype. All 6 slices are built (see [Progress](#progress)),
+> including the author-written FR-06 and FR-11 tests.
 > All data in this repository is synthetic. Do not load real client documents.
 
 ## Why
@@ -19,7 +22,7 @@ In a law office, filing a document to the wrong client's matter exposes that
 client's health and financial data to staff on another case. IntakeLink treats
 a misfile as a confidentiality risk, not just a filing error. The full problem
 analysis, requirements, and design are in the Solution Design Report
-([report link: add before submission]).
+([docs/IntakeLink_Solution_Design_Report.pdf](docs/IntakeLink_Solution_Design_Report.pdf)).
 
 ## Architecture
 
@@ -181,6 +184,10 @@ if anything differs from what is expected.
 ```bash
 streamlit run app/workbench.py
 ```
+
+A hosted copy runs at [https://intakelink-jbry7bvd7dauyhxn4admwd.streamlit.app/](https://intakelink-jbry7bvd7dauyhxn4admwd.streamlit.app/). The app may sleep when
+unused; the first visit wakes it, which takes about a minute. Each visitor gets
+their own in-memory copy of the data.
 
 Pick a synthetic user in the sidebar (simulated sign-in), load the test set, and
 work through the queue. Each user sees only records on their own matters. Senior
