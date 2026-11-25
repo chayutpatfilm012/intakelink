@@ -11,3 +11,5 @@ dist/
 *.key
 data/local/
 audit.jsonl
+# Local Claude Code settings
+.claude/
